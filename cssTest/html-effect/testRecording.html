@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<button onclick="begin()">录制</button>
+<button onclick="stop()" style="margin-right:80px">停止</button>
+
+<audio  id="y" controls="true" src=""> </audio>
+<button onclick="bofang()"> 播放</button>
+</body>
+<script src="./recorder.js"></script>
+<script>
+  var recorder = new Recorder({
+    sampleRate: 44100, //采样频率，默认为44100Hz(标准MP3采样率)
+    bitRate: 128, //比特率，默认为128kbps(标准MP3质量)
+    success: function(){ //成功回调函数
+    },
+    error: function(msg){ //失败回调函数
+    },
+    fix: function(msg){ //不支持H5录音回调函数
+    }
+  });
+
+  function begin(){
+    recorder.start();
+  }
+
+  function stop() {
+    recorder.stop();
+    //获取MP3编码的Blob格式音频文件
+    recorder.getBlob(function(blob){ //获取成功回调函数，blob即为音频文件
+      let audio = document.querySelector('#y');
+      audio.src=(window.URL||webkitURL).createObjectURL(blob);
+    }, function(msg) { //获取失败回调函数，msg为错误信息
+      console.log(msg)
+    })
+  }
+
+
+
+  function bofang(){
+    var audio = document.getElementById('y');
+
+
+      //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
+//             alert(audio.paused);
+      if(audio.paused)                     {
+        audio.play();//audio.play();// 这个就是播放
+      }else{
+        audio.pause();// 这个就是暂停
+      }
+    }
+
+  }
+</script>
+<script src="./vconsole.min.js"></script>
+<script>
+  var vConsole = new VConsole();
+</script>
+</html>

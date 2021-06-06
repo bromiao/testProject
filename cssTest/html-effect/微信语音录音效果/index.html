@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lee-voice</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            background: #fff;
+        }
+
+        .btn {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 150px;
+            background: #eee;
+        }
+
+        .btn input {
+            width: 100%;
+            height: 100%;
+            font: 50px/150px 'microsoft yahei';
+        }
+        
+        .content{
+            font: 36px '微软雅黑 Light';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 30px;
+            display: block;
+            text-align: center;
+            width: 90%;
+            padding: 20px 0;
+            margin: auto;
+            color: #ffffff;
+            font-weight: 500;
+            border-radius: 10px;
+        }
+        
+        .blackBox{
+            width: 440px;
+            height: 440px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background: url("./ic_record@2x.png")no-repeat 70px 40px/160px 260px,
+             url("./ic_record_ripple@2x-9.png")no-repeat 278px 80px/72px 220px;
+            
+            background: rgba(0,0,0,.7);
+           display: none;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="btn">
+    <input type="button" name="" id="messageBtn" value="按住 说话">
+</div>
+<div class="blackBox">
+    <p class="content"></p>
+</div>
+<script type="text/javascript">
+    var btnElem = document.getElementById("messageBtn");//获取ID
+    var posStart = 0;//初始化起点坐标
+    var posEnd = 0;//初始化终点坐标
+    var posMove = 0;//初始化滑动坐标\
+    var box = document.querySelector(".blackBox");
+    var con = document.querySelector(".content");
+    console.log(screen);
+    var index = [9, 8, 7, 6, 5, 4, 3, 2, 1, 2, 3, 4, 5, 6, 7, 8];
+    var num = index.length - 1;
+    var timer = null;
+    var live = true;
+    
+   
+
+
+    function initEvent() {
+       
+        btnElem.addEventListener("touchstart", function (event) {
+            event.preventDefault();//阻止浏览器默认行为
+            posStart = 0;
+            posStart = event.touches[0].pageY;//获取起点坐标
+            btnElem.value = '松开 结束';
+            console.log("start");
+            console.log(posStart + '---------开始坐标');
+            con.innerHTML = "手指上划，取消发送";
+            box.style.display = "block";
+            // sound();
+        });
+        btnElem.addEventListener("touchmove", function (event) {
+            event.preventDefault();//阻止浏览器默认行为
+            posMove = 0;
+            posMove = event.targetTouches[0].pageY;//获取滑动实时坐标
+            if (posStart - posMove < 500) {
+                btnElem.value = '松开 结束';
+                con.innerHTML = "手指上划，取消发送";
+                con.style.background = "none";
+                // box.style.background =  "url('./ic_record@2x.png')no-repeat 70px 40px/160px 260px, url('./ic_record_ripple@2x-" + index[num] + ".png')no-repeat 278px 80px/72px 220px";
+                box.style.background =  "url('./ic_record@2x.png')no-repeat 70px 40px/160px 260px, url('./ic_record_ripple@2x-9.png')no-repeat 278px 80px/72px 220px";
+                
+                box.style.backgroundColor = "rgba(0,0,0,.7)"
+            } else {
+                btnElem.value = '松开手指，取消发送';
+                box.style.background = "rgba(0,0,0,.7) url('ic_release_to_cancel@2x.png')no-repeat center 20px/168px 260px";
+                con.innerHTML = "松开手指， 取消发送";
+                con.style.background = "red";
+               clearInterval(timer);
+                console.log(posMove+'+++++++++');
+            }
+            
+            /*console.log(posStart+'---------');
+            console.log(posMove+'+++++++++');*/
+        });
+        
+        
+        btnElem.addEventListener("touchend", function (event) {
+            event.preventDefault();
+            posEnd = 0;
+            posEnd = event.changedTouches[0].pageY;//获取终点坐标
+            btnElem.value = '按住 说话';
+            console.log("End");
+            console.log(posEnd + '---------结束坐标');
+            clearInterval(timer);
+            if (posStart - posEnd < 500) {
+                console.log("发送成功");
+                box.style.display = "none";
+                save();
+            } else {
+                console.log("取消发送");
+                console.log("Cancel");
+                box.style.display = "none";
+            }
+        });
+        
+        
+    }
+    
+    initEvent();
+    
+
+    function save() {
+        //ajax
+        console.log('Success');
+    }
+    
+    //轮播
+
+    function sound(){
+        timer = setInterval(function(){
+            setTimeout(function(){
+                num++;
+                box.style.background =  "url('./ic_record@2x.png')no-repeat 70px 40px/160px 260px, url('./ic_record_ripple@2x-" + index[num] + ".png')no-repeat 278px 80px/72px 220px";
+                box.style.backgroundColor = " rgba(0,0,0,.7)";
+            }, 100);
+            if(num >= index.length - 1){
+                num = 0;
+            }
+        }, 100);
+    }
+    
+  
+
+
+    
+    
+</script>
+</body>
+</html>

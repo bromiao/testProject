@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div>
+    <h1>命令模式</h1>
+    <button id="replay">播放录像</button>
+  </div>
+
+  <hr>
+
+  <div>
+    <h1>中介者模式</h1>
+    选择颜色: <select id="colorSelect">
+    <option value="">请选择</option>
+    <option value="red">红色</option>
+    <option value="blue">蓝色</option>
+  </select>
+    选择内存: <select id="memorySelect">
+    <option value="">请选择</option>
+    <option value="32G">32G</option>
+    <option value="16G">16G</option>
+  </select>
+    输入购买数量: <input type="number" id="numberInput"/><br/>
+    您选择了颜色: <div id="colorInfo"></div><br/>
+    您选择了内存: <div id="memoryInfo"></div><br/>
+    您输入了数量: <div id="numberInfo"></div><br/>
+    <button id="nextBtn" disabled="true">请选择手机颜色和购买数量</button>
+  </div>
+
+  <hr>
+
+  <div>
+    <h1>装饰者模式</h1>
+    用户名：<input id="username" type="text"/>
+    密码： <input id="password" type="password"/>
+    <input id="submitBtn" type="button" value="提交">
+  </div>
+
+</body>
+<!--命令模式-->
+<script>
+  var Ryu = {
+    attack: function(){
+      console.log( '攻击' );
+    },
+    defense: function(){
+      console.log( '防御' );
+    },
+    jump: function(){
+      console.log( '跳跃' );
+    },
+    crouch: function(){
+      console.log( '蹲下' );
+    }
+  };
+
+  var makeCommand = function( receiver, state ){ // 创建命令
+    return function(){
+      receiver[state] && receiver[state]();
+    }
+  };
+
+  var commands = {
+    "119": "jump", // W
+    "115": "crouch", // S
+    "97": "defense", // A
+    "100": "attack" // D
+  };
+  var commandStack = []; // 保存命令的堆栈
+  document.onkeypress = function( ev ){
+    var keyCode = ev.keyCode,
+      command = makeCommand( Ryu, commands[ keyCode ] );
+    if ( command ){
+      command(); // 执行命令
+      commandStack.push( command ); // 将刚刚执行过的命令保存进堆栈
+    }
+  };
+
+  document.getElementById( 'replay' ).onclick = function(){ // 点击播放录像
+    var command;
+    while( command = commandStack.shift() ){ // 从堆栈里依次取出命令并执行
+      command();
+    }
+  };
+
+</script>
+<!--中介者模式-->
+<script src="mode-mediator.js"></script>
+<!--装饰者模式-->
+<script>
+  Function.prototype.before = function (beforeFn) {
+    const _self = this;
+    return function () {
+      beforeFn.apply(this, arguments);
+
+      return _self.apply(this, arguments);
+    }
+  }
+
+  Function.prototype.after = function (afterFn) {
+    const _self = this;
+    return function () {
+      const ret = _self.apply(this, arguments);
+      afterFn.apply(this, arguments);
+
+      return ret;
+    }
+  }
+
+  let func = function (params) {
+    console.log(params);
+  }
+
+  /*动态改变函数参数*/
+  func = func.before(function(params) {
+    params.c = 'c';
+  })
+
+  func({a: 'a', b: 'b'})
+
+
+  /*插件式的表单验证*/
+  var username = document.getElementById( 'username' ),
+    password = document.getElementById( 'password' ),
+    submitBtn = document.getElementById( 'submitBtn' );
+
+  Function.prototype.before = function (beforeFn) {
+    const _self = this;
+    return function() {
+      if (beforeFn.apply(this, arguments) === false) {
+        return;
+      }
+
+      return _self.apply(this, arguments);
+    }
+  }
+
+  const validator = function () {
+    if (!username.value) {
+      alert ( '用户名不能为空' );
+      return false;
+    }
+
+    if (!password.value) {
+      alert('密码不能为空');
+      return false;
+    }
+  }
+
+  let formSubmit = function () {
+    const param = {
+      username: username.value,
+      password: password.value
+    }
+
+    // 发送ajax请求
+    console.log('发送ajax请求----------》', '参数：', param);
+  }
+
+  formSubmit = formSubmit.before(validator);
+  submitBtn.onclick = function () {
+    formSubmit();
+  }
+
+</script>
+</html>

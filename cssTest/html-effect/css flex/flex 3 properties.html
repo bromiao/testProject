@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+      .item {
+          display: flex;
+          width: 500px;
+          height: 100px;
+      }
+      .item0 {
+          width: 50px;
+          flex: none;
+          background-color: red;
+      }
+      .item1 {
+          flex: 1 1 50px;
+          background-color: green;
+      }
+      .item2 {
+          flex: 7 1 100px;
+          background-color: blue;
+      }
+  </style>
+
+  <style>
+      .item00 {
+          display: flex;
+          width:300px;
+          height: 100px;
+      }
+
+      .item4 {
+          width:300px;
+          background-color: red;
+      }
+      .item5 {
+          flex: 1 1 100px;
+          background-color: green;
+      }
+      .item6 {
+          flex: 2 2 200px;
+          background-color: blue;
+      }
+  </style>
+  <style>
+    .red {
+        color: red;
+    }
+    .coral {
+        color: coral;
+    }
+  </style>
+
+</head>
+<body>
+<div>一、扩大</div>
+<div class="item">
+  <div class="item0">0
+
+  </div>
+  <div class="item1">1
+
+  </div>
+  <div class="item2">2
+
+  </div>
+</div>
+<pre>
+      .item0 {
+        width: 50px;
+        flex: none;
+        background-color: red;
+      }
+    </pre>
+<pre>
+      .item1 {
+          flex: 1 1 50px;
+          background-color: green;
+      }
+    </pre>
+<pre>
+      .item2 {
+          flex: 7 1 100px;
+          background-color: blue;
+      }
+    </pre>
+<div class="red">
+  当空间充足时，flex子项的宽度计算公式是： 自身的基础宽度 + 容器剩余宽度 *（自身伸张比例 / 所有子项伸张比例之和），要注意两种缩写
+
+  1.flex:none是flex: 0 0 auto的缩写
+  2.flex:num 是flex:num 1 0%的缩写。如flex：1 => flex: 1 1 0%。
+</div>
+<div class="coral">
+  补充:在空间充足情况下，flex-basis的优先级高于width属性。
+  当设置的flex子项是flex：1,width:100px时（等价于 flex: 1 1 0% ），
+  那么0%会覆盖掉原来的width：100px属性，0%相当于width：0px
+</div>
+<div>
+  <pre>
+    我们在item中设置了总得容器宽度为500px，容器中的item0、itme1、item2分别先占有自身的基础宽度，容器中剩余宽度则采用放大比例来进行放大。
+    剩余宽度 ：  500 - 50 - 50 - 100 = 300
+    item0本身宽度设置了50px，flex: none 等价于 flex: 0 0 auto，所有item0不参与放大,还是50px
+    item0宽度： 50 + 300*（ 0 / (0+1+7）) = 50
+    item1本身宽度设置的是flex: 1 1 50px中的第三个参数的值50px，当是扩大的情况下，我们只要看第一个参数就好了，
+    item0的第一个参数是0，item1的第一个参数是1，item2的第一个参数是7，所以容器剩余宽度将会被分为8份，
+    item1占一份，即为37.5px，item1总的宽度为87.5px
+    item1宽度： 50  +  300 *  ( 1 /（0+1+7）)   = 87.5
+    item2同理可得，item2占7份，即为262.5，item2总的宽度为362.5
+    item2宽度： 100  +  300 *（ 7 /（0+1+7））= 362.5
+  </pre>
+</div>
+<hr/>
+
+<div>2. 缩小</div>
+<div class="item00">
+  <div class="item4">0
+
+  </div>
+  <div class="item5">1
+
+  </div>
+  <div class="item6">2
+
+  </div>
+</div>
+<pre>
+      .item4 {
+          width:300px;
+          background-color: red;
+      }
+    </pre>
+<pre>
+      .item5 {
+          flex: 1 1 100px;
+          background-color: green;
+      }
+    </pre>
+<pre>
+      .item6 {
+          flex: 2 2 200px;
+          background-color: blue;
+      }
+    </pre>
+<div class="red">
+  当空间不充足时，flex子项的宽度计算公式是： 自身的基础宽度 - 超出宽度 *(自身宽度*收缩比例/总权重）
+</div>
+<div>
+  <pre>
+    超出宽度=300+100+200-300=300
+    总权重=300 * 1+100* 1+200*2=800   //理解一下总权重如何得出
+    item4的宽度=300 -  300 * 300*1/800 =300 - 112.5=187.5；(只有width属性时，flex的属性值是0 1 auto,空间不足时也会收缩)
+    item5的宽度=100 -  300 * 100*1/800 =100 - 37.5=62.5；
+    item6的宽度=200 -  300 * 200*2 /800 =200-150=50；
+  </pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script src="code-view.js"></script>-->
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+<script>
+    var str = 'black\t#000000\n' +
+            'silver\t#C0C0C0\n' +
+            'gray\t#808080\n' +
+            'white\t#FFFFFF\n' +
+            'maroon\t#800000\n' +
+            'red\t#FF0000\n' +
+            'purple\t#800080\n' +
+            'fuchsia\t#FF00FF\n' +
+            'green\t#008000\n' +
+            'lime\t#00FF00\n' +
+            'olive\t#808000\n' +
+            'yellow\t#FFFF00\n' +
+            'navy\t#000080\n' +
+            'blue\t#0000FF\n' +
+            'teal\t#008080\n' +
+            'aqua\t#00FFFF\n' +
+            'aliceblue\t#F0F8FF\n' +
+            'antiquewhite\t#FAEBD7\n' +
+            'aqua\t#00FFFF\n' +
+            'aquamarine\t#7FFFD4\n' +
+            'azure\t#F0FFFF\n' +
+            'beige\t#F5F5DC\n' +
+            'bisque\t#FFE4C4\n' +
+            'black\t#000000\n' +
+            'blanchedalmond\t#FFEBCD\n' +
+            'blue\t#0000FF\n' +
+            'blueviolet\t#8A2BE2\n' +
+            'brown\t#A52A2A\n' +
+            'burlywood\t#DEB887\n' +
+            'cadetblue\t#5F9EA0\n' +
+            'chartreuse\t#7FFF00\n' +
+            'chocolate\t#D2691E\n' +
+            'coral\t#FF7F50\n' +
+            'cornflowerblue\t#6495ED\n' +
+            'cornsilk\t#FFF8DC\n' +
+            'crimson\t#DC143C\n' +
+            'cyan\t#00FFFF\n' +
+            'darkblue\t#00008B\n' +
+            'darkcyan\t#008B8B\n' +
+            'darkgoldenrod\t#B8860B\n' +
+            'darkgray\t#A9A9A9\n' +
+            'darkgreen\t#006400\n' +
+            'darkgrey\t#A9A9A9\n' +
+            'darkkhaki\t#BDB76B\n' +
+            'darkmagenta\t#8B008B\n' +
+            'darkolivegreen\t#556B2F\n' +
+            'darkorange\t#FF8C00\n' +
+            'darkorchid\t#9932CC\n' +
+            'darkred\t#8B0000\n' +
+            'darksalmon\t#E9967A\n' +
+            'darkseagreen\t#8FBC8F\n' +
+            'darkslateblue\t#483D8B\n' +
+            'darkslategray\t#2F4F4F\n' +
+            'darkslategrey\t#2F4F4F\n' +
+            'darkturquoise\t#00CED1\n' +
+            'darkviolet\t#9400D3\n' +
+            'deeppink\t#FF1493\n' +
+            'deepskyblue\t#00BFFF\n' +
+            'dimgray\t#696969\n' +
+            'dimgrey\t#696969\n' +
+            'dodgerblue\t#1E90FF\n' +
+            'firebrick\t#B22222\n' +
+            'floralwhite\t#FFFAF0\n' +
+            'forestgreen\t#228B22\n' +
+            'fuchsia\t#FF00FF\n' +
+            'gainsboro\t#DCDCDC\n' +
+            'ghostwhite\t#F8F8FF\n' +
+            'gold\t#FFD700\n' +
+            'goldenrod\t#DAA520\n' +
+            'gray\t#808080\n' +
+            'green\t#008000\n' +
+            'greenyellow\t#ADFF2F\n' +
+            'grey\t#808080\n' +
+            'honeydew\t#F0FFF0\n' +
+            'hotpink\t#FF69B4\n' +
+            'indianred\t#CD5C5C\n' +
+            'indigo\t#4B0082\n' +
+            'ivory\t#FFFFF0\n' +
+            'khaki\t#F0E68C\n' +
+            'lavender\t#E6E6FA\n' +
+            'lavenderblush\t#FFF0F5\n' +
+            'lawngreen\t#7CFC00\n' +
+            'lemonchiffon\t#FFFACD\n' +
+            'lightblue\t#ADD8E6\n' +
+            'lightcoral\t#F08080\n' +
+            'lightcyan\t#E0FFFF\n' +
+            'lightgoldenrodyellow\t#FAFAD2\n' +
+            'lightgray\t#D3D3D3\n' +
+            'lightgreen\t#90EE90\n' +
+            'lightgrey\t#D3D3D3\n' +
+            'lightpink\t#FFB6C1\n' +
+            'lightsalmon\t#FFA07A\n' +
+            'lightseagreen\t#20B2AA\n' +
+            'lightskyblue\t#87CEFA\n' +
+            'lightslategray\t#778899\n' +
+            'lightslategrey\t#778899\n' +
+            'lightsteelblue\t#B0C4DE\n' +
+            'lightyellow\t#FFFFE0\n' +
+            'lime\t#00FF00\n' +
+            'limegreen\t#32CD32\n' +
+            'linen\t#FAF0E6\n' +
+            'magenta\t#FF00FF\n' +
+            'maroon\t#800000\n' +
+            'mediumaquamarine\t#66CDAA\n' +
+            'mediumblue\t#0000CD\n' +
+            'mediumorchid\t#BA55D3\n' +
+            'mediumpurple\t#9370DB\n' +
+            'mediumseagreen\t#3CB371\n' +
+            'mediumslateblue\t#7B68EE\n' +
+            'mediumspringgreen\t#00FA9A\n' +
+            'mediumturquoise\t#48D1CC\n' +
+            'mediumvioletred\t#C71585\n' +
+            'midnightblue\t#191970\n' +
+            'mintcream\t#F5FFFA\n' +
+            'mistyrose\t#FFE4E1\n' +
+            'moccasin\t#FFE4B5\n' +
+            'navajowhite\t#FFDEAD\n' +
+            'navy\t#000080\n' +
+            'oldlace\t#FDF5E6\n' +
+            'olive\t#808000\n' +
+            'olivedrab\t#6B8E23\n' +
+            'orange\t#FFA500\n' +
+            'orangered\t#FF4500\n' +
+            'orchid\t#DA70D6\n' +
+            'palegoldenrod\t#EEE8AA\n' +
+            'palegreen\t#98FB98\n' +
+            'paleturquoise\t#AFEEEE\n' +
+            'palevioletred\t#DB7093\n' +
+            'papayawhip\t#FFEFD5\n' +
+            'peachpuff\t#FFDAB9\n' +
+            'peru\t#CD853F\n' +
+            'pink\t#FFC0CB\n' +
+            'plum\t#DDA0DD\n' +
+            'powderblue\t#B0E0E6\n' +
+            'purple\t#800080\n' +
+            'red\t#FF0000\n' +
+            'rosybrown\t#BC8F8F\n' +
+            'royalblue\t#4169E1\n' +
+            'saddlebrown\t#8B4513\n' +
+            'salmon\t#FA8072\n' +
+            'sandybrown\t#F4A460\n' +
+            'seagreen\t#2E8B57\n' +
+            'seashell\t#FFF5EE\n' +
+            'sienna\t#A0522D\n' +
+            'silver\t#C0C0C0\n' +
+            'skyblue\t#87CEEB\n' +
+            'slateblue\t#6A5ACD\n' +
+            'slategray\t#708090\n' +
+            'slategrey\t#708090\n' +
+            'snow\t#FFFAFA\n' +
+            'springgreen\t#00FF7F\n' +
+            'steelblue\t#4682B4\n' +
+            'tan\t#D2B48C\n' +
+            'teal\t#008080\n' +
+            'thistle\t#D8BFD8\n' +
+            'tomato\t#FF6347\n' +
+            'turquoise\t#40E0D0\n' +
+            'violet\t#EE82EE\n' +
+            'wheat\t#F5DEB3\n' +
+            'white\t#FFFFFF\n' +
+            'whitesmoke\t#F5F5F5\n' +
+            'yellow\t#FFFF00\n' +
+            'yellowgreen\t#9ACD32'
+
+
+</script>
+</html>

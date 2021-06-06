@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="number" id="inputId"  pattern="\d*"/>
+</body>
+<script type="text/javascript">
+  var kflag = false;
+  var ele = document.getElementById('inputId');//根据Id获取input对象
+  ele.addEventListener('keypress', function(e){
+    if( kflag ){
+      e.preventDefault();
+    }else{
+      kflag = true;
+    }
+  }, false);
+  ele.addEventListener('keyup', function(e){
+    kflag = false;
+  }, false);
+</script>
+</html>

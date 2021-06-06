@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>css flex布局模块</title>
+  <style>
+    .flex__container{
+      margin: 0;
+      background-color: #291642;
+      font-family: "Gochi Hand", sans-serif;
+      font-size: 100%;
+      letter-spacing: 0.1rem;
+      color: #fff;
+      padding: 2vh;
+      display: flex;
+      justify-content: space-between;
+    }
+    .flex__container > *{
+      display: flex;  /*display为flex,默认align-items为stretch*/
+      /*flex-direction: column;
+      align-items: center;
+      justify-content: center;*/
+      background-color: #607d8b;
+      border-radius: 3px;
+      box-shadow: 0 0 3px 2px rgba(255, 255, 255, 0.25);
+    }
+
+    .flex__container02{
+      display: flex;
+    }
+    .flex__container02 > * {
+      height: 100%;
+    }
+
+    .flex__container03 {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .flex__container03 > .flex__item {
+      background-color: #fff;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1 0 400px;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+      padding: 20px;
+      margin: 0 2vh 2vh;
+    }
+    .flex__container03 > .flex__item > .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background-color: #607d8b;
+    }
+    .flex__container03 > .flex__item > h4 {
+      background-color: #607d8b;
+      width: 80%;
+      border-radius: 4px;
+      height: 20px;
+      margin-bottom: 10px;
+    }
+    .flex__container03 > .flex__item > p {
+      width: 100%;
+      height: 100px;
+      background-image: linear-gradient(to bottom, #607d8b 0%, #607d8b 80%, transparent 80%, transparent 100%);
+      background-size: 100% 26px;
+      background-repeat-y: repeat;
+      margin-bottom: 20px;
+    }
+    .flex__container03 > .flex__item > button {
+      min-width: 50%;
+      height: 30px;
+      border-radius: 4px;
+      background-color: #607d8b;
+      border: none;
+      margin-top: auto;
+      align-self: flex-start;
+    }
+
+  </style>
+</head>
+<body>
+  <fieldset>
+    <legend><h3>flex实现等高布局</h3></legend>
+    <div class="flex__container">
+      <nav>
+        <p>Nav Section</p>
+      </nav>
+      <main>
+        <p>Main Section</p>
+      </main>
+      <aside>
+        <p>Aside Section</p>
+      </aside>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>flex实现等高布局2</h3></legend>
+    <div class="flex__container02">
+      <nav>
+        <p>Nav Section</p>
+      </nav>
+      <main>
+        <p>Main Section</p>
+      </main>
+      <aside>
+        <p>Aside Section</p>
+      </aside>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>flex自动换行</h3></legend>
+    <div class="flex__container03">
+      <div class="flex__item">
+        <div class="avatar"></div>
+        <h4></h4>
+        <p></p>
+        <button></button>
+      </div>
+      <div class="flex__item">
+        <div class="avatar"></div>
+        <h4></h4>
+        <p></p>
+        <button></button>
+      </div>
+      <div class="flex__item">
+        <div class="avatar"></div>
+        <h4></h4>
+        <p></p>
+        <button></button>
+      </div>
+      <div class="flex__item">
+        <div class="avatar"></div>
+        <h4></h4>
+        <p></p>
+        <button></button>
+      </div>
+    </div>
+  </fieldset>
+
+
+
+</body>
+</html>

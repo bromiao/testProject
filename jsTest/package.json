@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "lodash": "^4.17.15",
+    "node-xlsx": "^0.15.0",
+    "path": "^0.12.7",
+    "pinyin": "^2.9.1",
+    "ws": "^7.2.5"
+  },
+  "devDependencies": {
+    "mockjs": "^1.1.0"
+  }
+}

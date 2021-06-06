@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>app</title>
+  <script src="https://cdn.bootcss.com/socket.io/2.2.0/socket.io.slim.js"></script>
+</head>
+<body>
+<input type="text" id="input">
+<button id="btn">send</button>
+<div id="content-wrap"></div>
+</body>
+<script>
+  window.onload = () => {
+    let inputValue = null
+
+    let socket = io('http://localhost:3000')
+    socket.on('broadcast', data =>{
+      let content = document.createElement('p')
+      content.innerHTML = data
+      document.querySelector('#content-wrap').appendChild(content)
+    })
+
+    let inputChangeHandle = (ev) => {
+      inputValue = ev.target.value
+    }
+    let inputDom = document.querySelector("#input")
+    inputDom.addEventListener('input', inputChangeHandle, false)
+
+    let sendHandle = () => {
+      socket.emit('channel', inputValue)
+    }
+    let btnDom = document.querySelector("#btn")
+    btnDom.addEventListener('click', sendHandle, false)
+
+
+    window.onunload = () => {
+      btnDom.removeEventListener('click', sendHandle, false)
+      inputDom.removeEventListener('input', inputChangeHandle, false)
+    }
+  }
+</script>
+
+</html>

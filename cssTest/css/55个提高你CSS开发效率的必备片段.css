@@ -1,0 +1,806 @@
+/*公共样式*/
+.float-l{
+    float: left;
+}
+.float-r{
+    float: right;
+}
+.pos-relative{
+    position: relative;
+}
+
+/*清除浮动*/
+.clearfix:after {
+    content: "\00A0";
+    display: block;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+.clearfix {
+    zoom: 1;
+}
+.clearfix li{
+    width: 20%;
+    height: 30px;
+    float: left;
+}
+
+
+/*垂直水平居中*/
+.box-height1{
+    height: 100px;
+}
+.vh-center1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -3em;
+    margin-left: -7em;
+    width: 14em;
+    height: 6em;
+}
+.vh-center2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.vh-center3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*文本末尾添加省略号*/
+.ellipsis-show1{
+    /*宽度固定，适合单行显示...*/
+    width: 100px;
+    color: red;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ellipsis-show2{
+    /*宽度不固定，适合多行以及移动端显示*/
+    width: 100px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+/*制造文本的模糊效果*/
+.text-fuzzy{
+    color: transparent;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/*动画实现简洁 loading 效果*/
+.loading:after {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    content: "\2026";
+    -webkit-animation: ellipsis 2s infinite;
+}
+
+/*// 动画部分*/
+@-webkit-keyframes ellipsis {
+    from {
+        width: 2px;
+    }
+    to {
+        width: 15px;
+    }
+}
+
+
+/*自定义文本选中样式*/
+/*// 注意只能修改这两个属性 字体颜色 选中背景颜色*/
+.element::selection {
+    color: green;
+    background-color: pink;
+}
+.element::-moz-selection {
+    color: green;
+    background-color: pink;
+}
+
+
+/*afd*/
+.wrap {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    position: relative;
+    background-color: #f3f3f3;
+}
+
+.ribbon {
+    background-color: #a00;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    /* shadom */
+    -webkit-box-shadow: 0 0 10px #888;
+    -moz-box-shadow: 0 0 10px #888;
+    box-shadow: 0 0 10px #888;
+    /* rotate */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    /* position */
+    left: -50px;
+    top: 40px;
+}
+
+.ribbon a {
+    border: 1px solid #faa;
+    color: #fff;
+    display: block;
+    font: bold 81.25% "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 1px 0;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    /* shadow */
+    text-shadow: 0 0 5px #444;
+}
+
+
+/*input 占位符*/
+input::-webkit-input-placeholder {
+    color: green;
+    background-color: pink;
+    font-size: 14px;
+}
+input:-moz-placeholder {
+    color: green;
+    background-color: pink;
+    font-size: 14px;
+}
+input::-ms-input-placeholder {
+    color: green;
+    background-color: pink;
+    font-size: 14px;
+}
+
+
+/*移动端可点击元素去处默认边框*/
+html,body{
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+
+/*首字下沉*/
+.first-word-down:first-letter {
+    float: left;
+    color: green;
+    font-size: 30px;
+}
+
+
+/*小三角*/
+.display-inline-block{
+    display: inline-block;
+}
+.triangle {
+    /* 基础样式 */
+    border: solid 10px transparent;
+}
+
+/*下*/
+.triangle.bottom {
+    border-top-color: green;
+}
+/*上*/
+.triangle.top {
+    border-bottom-color: green;
+}
+/*左*/
+.triangle.left {
+    display: inline-block;
+    border-right-color: green;
+}
+/*右*/
+.triangle.right {
+    display: inline-block;
+    border-left-color: green;
+}
+
+
+/*添加鼠标手型*/
+a[href],
+input[type="submit"],
+input[type="image"],
+input[type="button"],
+label[for],
+select,
+button {
+    cursor: pointer;
+}
+
+
+/*屏蔽 Webkit 移动浏览器中元素高亮效果*/
+.shield-highlight-for-mobile{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/*统一 input、select、textarea 宽度*/
+/*不同浏览器的 input、select、textarea 的盒子模型宽度计算方式不同，统一为最常见的 content-box*/
+input,
+select,
+textarea {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+table {
+    /*table 相邻单元格的边框间的距离设置为 0*/
+    border-spacing: 0;
+    /*默认情况下给 tr 设置 border 没有效果，如果 table 设置了边框为合并模式：「border-collapse: collapse;」就可以了*/
+    border-collapse: collapse;
+}
+.table-border{
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.table-border th,.table-border td{
+    border: 1px solid #ddd;
+}
+
+
+/*移除浏览器部分元素的默认边框*/
+/*acronym、fieldset … 等其他标签不是很常用，就不会一一列举；如果项目中用到，可以自己单独写*/
+img,
+/*input,*/
+button,
+textarea {
+    border: none;
+    -webkit-appearance: none;
+}
+
+input {
+    /*由于 input 默认不继承父元素的居中样式，所以设置：「text-align: inherit」*/
+    text-align: inherit;
+}
+
+textarea {
+    /*textarea 默认不可以放缩*/
+    resize: none;
+}
+
+
+/*取消火狐浏览器部分版本 input 聚焦时默认的「padding、border」*/
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+
+/*取消部分浏览器数字输入控件的操作按钮*/
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+}
+
+
+/*输入控件 placeholder 色设置 #999*/
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #999;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #999;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #999;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #999;
+}
+
+template {
+    /*由于部分浏览 template 会显示出来，所以要隐*/
+    display: none;
+}
+
+
+/*position: fixed 防止抖动*/
+.pf {
+    position: fixed;
+    /*chrome 内核 浏览器 position: fixed 防止抖动*/
+    -webkit-transform: translateZ(0);
+}
+
+
+/*利用绝对定位宽高拉升原理，中心居中元素*/
+/*绝对定位元素的布局由元素的三个因素决定：位置（top、bottom、left、right）、元素尺寸和margin。
+绝对定位元素在布局上呈现自适应的特点——位置和尺寸固定，则自适应margin值；位置和margin固定，则自适应尺寸*/
+/*（1）位置和尺寸固定,margin:auto;*/
+.wrap {
+    width: 500px;
+    height: 500px;
+    border: 1px dotted black;
+    margin: 0 auto;
+    position: relative;
+}
+
+.item1 {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    /* 核心代码 */
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/*（2）位置和margin固定*/
+.item2{
+    background-color: purple;
+    /* 核心代码 */
+    position: absolute;
+    margin: 20px;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/*强制换行/自动换行/强制不换行*/
+/* 强制不换行 */
+.nowrap {
+    white-space: nowrap;
+    width: 100px;
+    overflow-x: auto;
+}
+
+/* 自动换行 */
+.auto-wrap {
+    word-wrap: break-word;
+    word-break: normal;
+    width: 100px;
+}
+
+/* 强制英文单词断行 */
+.force-en-word-wrap {
+    word-break: break-all;
+    width: 100px;
+}
+
+
+/*table 边界的样式*/
+.table-border-style {
+    border: 1px solid #000;
+    padding: 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-top: 10px;
+}
+.table-border-style td {
+    height: 30px;
+    border: 1px solid #000;
+    background: #fff;
+    font-size: 15px;
+    padding: 3px 3px 3px 8px;
+    color: #000;
+    width: 160px;
+}
+
+
+/*绝对定位与 margin*/
+/*当我们提前知道要居中元素的长度和宽度时，可以使用这种方式*/
+.container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #333333;
+}
+.content {
+    background-color: #ccc;
+    width: 160px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -80px; /* 宽度的一半 */
+    margin-top: -50px; /* 高度的一半 */
+}
+
+/*绝对定位与 transform*/
+/*当要居中的元素不定宽和定高时，我们可以使用 transform 来让元素进行偏移*/
+.container1 {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #333333;
+}
+.content1 {
+    background-color: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    text-align: center;
+}
+
+
+/*flex 布局*/
+.container-flex {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-flex {
+    background-color: #ccc;
+    text-align: center;
+}
+
+
+/*图片上下左右居中*/
+.img-middle {
+    width: 400px;
+    height: 400px;
+    border: 1px solid #ccc;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/*标题两边的小横杠*/
+.column-title {
+    font: 400 20px Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-title:after,
+.column-title:before {
+    background: #000000;
+    content: "";
+    height: 2px;
+    width: 20%;
+}
+.column-title:before{
+    margin-right: 2%;
+}
+.column-title:after{
+    margin-left: 2%;
+}
+
+
+/*用 border 属性绘制元素*/
+.triangle1 {
+    /*锐角三角形*/
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 100px solid #249ff1;
+    border-left: 30px solid transparent;
+    border-right: 100px solid transparent;
+}
+.triangle2 {
+    /*直角三角形*/
+    width: 0;
+    height: 0;
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid #ff5b01;
+    border-left: 50px solid #ff5b01;
+    border-right: 50px solid transparent;
+}
+.trapezoid {
+    /*梯形*/
+    width: 0;
+    height: 0;
+    border-top: none;
+    border-right: 80px solid transparent;
+    border-bottom: 60px solid #13dbed;
+    border-left: 80px solid #13dbed;
+}
+
+
+/*用 border-radius 绘制元素*/
+/*圆柱*/
+.cylinder{
+    width: 100px;
+    height: 100px;
+    border-radius:50px/30px;
+    background: #EC0465;
+}
+
+/*蛋型*/
+.egg{
+
+    width: 120px;
+
+    height: 160px;
+
+    background: #EC0465;
+
+    border-radius: 60px 60px 60px 60px/100px 100px 60px 60px;
+
+}
+
+/*实心圆*/
+.circle{
+    width: 120px;
+    height: 120px;
+    background: #EC0465;
+    border-radius: 100%;
+}
+
+/*半圆*/
+.lf-self-circle {
+    width: 60px;
+    height: 120px;
+    background: #EC0465;
+    border-radius: 60px 0 0 60px;
+}
+
+/*椭圆*/
+.ty{
+    width: 160px;
+    height: 100px;
+    background: #EC0465;
+    border-radius: 80px/50px;
+}
+
+/*扇形*/
+.quarter-botlf-cir {
+    width: 60px;
+    height: 60px;
+    background: #EC0465;
+    border-radius: 0 0 0 60px;
+}
+
+/*花瓣*/
+.flower {
+    width: 120px;
+    height: 120px;
+    background: #EC0465;
+    border-radius: 60px 60px 0 60px;
+}
+
+/*胶囊*/
+.level-capsule {
+    width: 160px;
+    height: 100px;
+    border-radius: 50px;
+    background: #EC0465;
+}
+
+
+/*用 box-shadow 绘制元素*/
+.plus {
+    width: 30px;
+    height: 30px;
+    margin-left: 50px; /*由于box-shadow不占空间，常常需要添加margin来校正位置*/
+    background: #000;
+    box-shadow: 0 -30px 0 red, 0 30px 0 red, -30px 0 0 red, 30px 0 0 red; /*上下左右的shadow效果*/
+    margin-bottom: 30px;
+}
+.target {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /*核心部分*/
+    width: 30px;
+    height: 30px;
+    background: red;
+    border-radius: 50%;
+    margin-left: 50px;
+    box-shadow: 0 0 0 10px #fff, 0 0 0 20px red, 0 0 0 30px #fff, 0 0 0 40px red;
+}
+
+
+/*使用 CSS 渐变来绘制图标*/
+.gradient {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: silver;
+    background-image: linear-gradient(335deg, #b00 23px, transparent 23px),
+                      linear-gradient(155deg, #d00 23px, transparent 23px),
+                      linear-gradient(335deg, #b00 23px, transparent 23px),
+                      linear-gradient(155deg, #d00 23px, transparent 23px);
+    background-size: 58px 58px;
+    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+}
+
+
+/*css实现形状*/
+/*1.心形*/
+.heart {
+    width: 50px;
+    height: 50px;
+    background-color: #fc2e5a;
+    transform: rotate(-45deg);
+}
+.heart:before {
+    content: "";
+    position:absolute;
+    top: -25px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fc2e5a;
+}
+.heart:after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: #fc2e5a;
+    border-radius: 50%;
+}
+
+/*2.相机*/
+.camera {
+    display: inline-block;
+    border-style: solid;
+    border-width: 0.65em 0.9em;
+    border-radius: 0.1em;
+}
+.camera:before {
+    position: absolute;
+    top: -0.3em;
+    left: -0.3em;
+    width: 0.4em;
+    height: 0.4em;
+    border-radius: 50%;
+    border: 0.1em solid #fff;
+    box-shadow: 0 0 0 0.08em, 0 0 0 0.16em #fff;
+    content: "";
+}
+.camera:after {
+    position: absolute;
+    top: -0.5em;
+    left: 0.5em;
+    width: 0.2em;
+    border-top: 0.125em solid #fff;
+    content: "";
+}
+
+/*3.月亮*/
+.moon {
+    display: inline-block;
+    height: 1.5em;
+    width: 1.5em;
+    box-shadow: inset -0.4em 0 0;
+    border-radius: 2em;
+    transform: rotate(20deg);
+}
+
+
+/*文本缩进*/
+.txt-width{
+    width: 100px;
+}
+.text-indent {
+    text-indent: 2rem;
+}
+/*16px*/
+.text-indent-xs {
+    text-indent: 1.5rem;
+}
+/*12px*/
+.text-indent-sm {
+    text-indent: 1.7rem;
+}
+/*14px*/
+.text-indent-md {
+    text-indent: 2rem;
+}
+/*18px*/
+.text-indent-lg {
+    text-indent: 2.4rem;
+}
+/*20px*/
+
+
+/*阴影效果*/
+.shadow-effect{
+    display: inline-block;
+}
+.shadow-text-xs {
+    text-shadow: 4px 3px 0 #1d9d74, 9px 8px 0 rgba(0, 0, 0, 0.15);
+} /*智能兼容ie10以上 暂不考虑*/
+
+.shadow-xs {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=100, Color='#cccccc')"; /* For IE 8 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=100, Color='#cccccc'); /* For IE 5.5 - 7 */
+    -moz-box-shadow: 1px 1px 2px #cccccc; /* for firefox */
+    -webkit-box-shadow: 1px 1px 2px #cccccc; /* for safari or chrome */
+    box-shadow: 1px 1px 2px #cccccc; /* for opera or ie9 */
+}
+.shadow-sm {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=120, Color='#cccccc')"; /* For IE 8 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=120, Color='#cccccc'); /* For IE 5.5 - 7 */
+    -moz-box-shadow: 2px 2px 3px #cccccc; /* for firefox */
+    -webkit-box-shadow: 2px 2px 3px #cccccc; /* for safari or chrome */
+    box-shadow: 2px 2px 3px #cccccc; /* for opera or ie9 */
+}
+.shadow-md {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#cccccc')"; /* For IE 8 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#cccccc'); /* For IE 5.5 - 7 */
+    -moz-box-shadow: 3px 3px 5px #cccccc; /* for firefox */
+    -webkit-box-shadow: 3px 3px 5px #cccccc; /* for safari or chrome */
+    box-shadow: 3px 3px 5px #cccccc; /* for opera or ie9 */
+}
+.shadow-lg {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=150, Color='#cccccc')"; /* For IE 8 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=150, Color='#cccccc'); /* For IE 5.5 - 7 */
+    -moz-box-shadow: 5px 5px 8px #cccccc; /* for firefox */
+    -webkit-box-shadow: 5px 5px 8px #cccccc; /* for safari or chrome */
+    box-shadow: 5px 5px 8px #cccccc; /* for opera or ie9 */
+}
+
+
+/*圆角*/
+.border-line{
+    border: 1px solid #d60b52;
+    display: inline-block;
+    margin: 5px 0;
+}
+.border-radius-xs {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.border-radius-sm {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.border-radius-md {
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+.border-radius-lg {
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}

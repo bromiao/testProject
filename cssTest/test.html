@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div{
+
+            margin: auto;
+
+            width: 60%;
+
+            height: 800px;
+
+            line-height: 100px;
+
+            text-align: center;
+
+            font-size: 40px;
+
+            font-weight: bold;
+
+            color: transparent;
+
+            background: url('imgs/about-icon04.png') no-repeat center center;
+
+            background-size: cover;
+
+            -webkit-background-clip: text;
+
+        }
+
+        img{width:800px;height:450px;margin:0 auto;}
+        .img { display:block; position: relative; width:800px; height:450px; margin:0 auto;}
+        .img:before{ content: ""; position: absolute; width:200px; height: 100%; top: 0; left: -150px; overflow: hidden;
+
+
+
+            background: -moz-linear-gradient(left, rgba(255,255,255,0)0, rgba(255,255,255,.2)50%, rgba(255,255,255,0)100%);
+
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(50%, rgba(255,255,255,.2)), color-stop(100%, rgba(255,255,255,0)));
+
+
+
+            background: -webkit-linear-gradient(left, rgba(255,255,255,0)0, rgba(255,255,255,.2)50%, rgba(255,255,255,0)100%);
+
+
+
+            background: -o-linear-gradient(left, rgba(255,255,255,0)0, rgba(255,255,255,.2)50%, rgba(255,255,255,0)100%);
+
+
+
+            -webkit-transform: skewX(-25deg);
+            -moz-transform: skewX(-25deg)
+
+
+
+        }
+
+        .img:hover:before { left: 150%; transition: left 1s ease 0s; }
+
+    </style>
+</head>
+<body>
+<div id="div">css大法好呀，秀呀，秀儿。。。</div>
+
+<div>
+    <a href="#" class="img">
+        <img src="imgs/about-icon04.png" alt="风景"/>
+    </a>
+</div>
+
+</body>
+</html>

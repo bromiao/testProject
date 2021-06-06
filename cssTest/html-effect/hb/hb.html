@@ -1,0 +1,159 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>[微信荭包]恭喜您发财！发荭包咯！点击拆开！</title>
+<script type="text/javascript">
+//缩放比例
+if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+	var version = parseFloat(RegExp.$1);
+	if(version>2.3){
+		var phoneScale = parseInt(window.screen.width)/640;
+		document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+	}else{
+		document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+	}
+}else{
+	document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+}
+</script>
+<link rel="stylesheet" href="statics/css/skin.css" />
+<meta name="format-detection" content="telephone=no" />
+</head>
+<body>
+
+<div style="display: none;"><img src="statics/images/17382hb.jpg" /></div>
+	<div class="main">
+		<div class="content">
+			<div class="title">微信荭包<span>微信安全支付</span></div>
+			<a class="report">举报</a>
+			<div class="userinfo">
+				<div class="user-picture"><img src="statics/images/173821.jpg"/></div>
+				<div class="user-red">我的荭包</div>
+				<div class="red-message">恭喜您发财！发大财！</div>
+				<div class="money-wrap"><strong id="money">98.68</strong>元</div>
+			</div>
+			<div class="tixian" id="tixian">
+				<form class="my-info my-infos">
+					<input type="tel" class="text-input" placeholder="输入支付宝" />
+					<input type="text" class="text-input" placeholder="输入提现金额" />
+					<div class="info-tips">48小内到账</div>
+					<input type="submit" class="tixian-submit" value="立即提交" />
+				</form>
+			</div>
+			<form class="my-info" id="grab">
+				<input type="tel" class="text-input" placeholder="输入手机号码" />
+				<input type="text" class="text-input" placeholder="输入昵称" />
+				<input type="submit" class="info-submit" value="立即提交" />
+				<div class="info-tips"><em>注意：</em>手机号码将作为领取荭包的唯一凭证，请牢记。</div>
+			</form>
+			<ul class="button">
+				<li class="take-money">点此立刻提现</li>
+			</ul>
+		</div>
+	</div>
+	<a class="ad" href="http://mp.weixin.qq.com/s?__biz=MzAwMTY0OTUxNQ==&mid=209356427&idx=1&sn=1ad3a2a79e0c7816a0e4f4c6ae98f717#rd">
+<!--		<img src="statics/images/12320150808173141_605.gif" />-->
+	</a>
+	<div id="shade">
+		<div class="open-red" id="open-red">
+			<div class="userinfo">
+				<div class="user-picture"><img src="statics/images/173821.jpg"/></div>
+				<div class="user-red">恭喜您</div>
+				<div class="money-tips">获得了一个荭包</div>
+				<div class="red-message">恭喜您发财！发大财！</div>
+			</div>
+			<a class="open auto-x">拆荭包</a>
+		</div>
+		<div class="share"><img src="statics/images/17382share.png" /></div>
+	</div>
+	<form action="" method="get" class="report-wrap">
+		<fieldset>
+			<legend>举报表单</legend>
+			<input type="submit" value="提 交" class="report-smt" />
+			<p class="choose-title">请选择举报愿意</p>
+			<div class="choose-item">
+				<input type="radio" name="rept" />
+				<label>色情低俗</label>
+				<input type="radio" name="rept" />
+				<label>谣言</label>
+				<input type="radio" name="rept" />
+				<label>诱导分享</label>
+				<input type="radio" name="rept" />
+				<label>政治敏感</label>
+				<input type="radio" name="rept" />
+				<label>其他（收集隐私信息等）</label>
+			</div>
+			<textarea class="supplement" placeholder="补充说明"></textarea>
+		</fieldset>
+	</form>
+	<div class="report-finish">
+		<h2>感谢举报</h2>
+		<div class="wechat"><img src="statics/images/17382wechat.png"/></div>
+		<span class="condition">已提交</span>
+		<p>你的举报已提交审核，我们会尽快处理，<br />审核结果将通过“微信团队”公众号反馈给<br />你。感谢你的支持！</p>
+		<span class="finish">完成</span>
+	</div>
+	<script type="text/javascript" src="statics/js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="statics/js/jquery.transit.js"></script>
+	<script type="text/javascript" src="statics/js/jquery-hcheckbox.js"></script>
+	<!-- <script type="text/javascript" src="statics/js/swiper.js"></script> -->
+<script type="text/javascript">
+	/*
+ * 全站公共脚本,基于jquery-1.9.1脚本库
+ */
+$(function() {
+	$(".open").on("tap",function(event){
+		event.preventDefault();
+		if ( !$(this).hasClass("opend") ){
+			$(this).addClass("opend");
+			setTimeout(function(){
+				document.getElementById("shade").style.display = "none";
+			},800)
+		}
+	})
+	//提现
+	$(document).on("tap",".take-money",function(event){
+		event.preventDefault();
+		$(".share").show();
+		$("#open-red").hide();
+		$("#shade").show();
+		/*setTimeout(function(){
+			window.location.href = "http://www.baidu.com/";
+		},30000)*/
+	})
+	//举报
+	$(document).on("tap",".report",function(event){
+		event.preventDefault();
+		$(".report-wrap").show();
+	})
+	$(document).on("submit",".report-wrap",function(event){
+			event.preventDefault();
+			var queryString="action=ts&SjTime="+ new Date().getTime();
+			 $.ajax({
+			   type: "POST",
+			   url: "ts.php",
+			   data: queryString,
+			   error:function(b){alert(b.responseText);},
+			   success: function(data){
+				   //data = data.replace(/^\s+|\s+$/g,"");
+					$(".report-wrap").hide();
+					$(".report-finish").show();
+				 }
+			  });
+
+	})
+
+	//单选多选美化
+		$(":input[type=radio]").parent().each(function(){
+			$(this).hradio();
+		})
+	if ( $(".seek-help").length ){
+		$(".share").show();
+		$("#shade").show();
+	}
+})
+</script>
+<div style="display:none"></div>
+</body>
+</html>

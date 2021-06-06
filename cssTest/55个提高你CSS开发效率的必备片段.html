@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="./css/55个提高你CSS开发效率的必备片段.css">
+</head>
+<body class="pos-relative">
+  <fieldset>
+    <legend><h3>清除浮动</h3></legend>
+    <div>
+      <ul class="clearfix">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+        <li>E</li>
+      </ul>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>垂直水平居中</h3></legend>
+    <div>
+      <div>
+        <h4>1.绝对定位方式且已知宽高</h4>
+        <div class="pos-relative box-height1">
+          <div class="vh-center1">
+            垂直水平居中——绝对定位方式且已知宽高
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4>2.绝对定位 ＋ 未知宽高 ＋ translate</h4>
+        <div class="pos-relative box-height1">
+          <div class="vh-center2">
+            垂直水平居中——(绝对定位 ＋ 未知宽高 ＋ translate)
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4>3.flex 轻松搞定水平垂直居中(未知宽高)</h4>
+        <div class="pos-relative box-height1 vh-center3">
+          <div>
+            垂直水平居中——flex 轻松搞定水平垂直居中(未知宽高)
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>文本末尾添加省略号</h3></legend>
+    <div>
+      <div>
+        <h4>1.宽度固定，适合单行显示...</h4>
+        <div class="ellipsis-show1">
+          宽度固定，适合单行显示'...' 宽度固定，适合单行显示'...'
+        </div>
+      </div>
+      <div>
+        <h4>2.宽度不固定，适合多行以及移动端显示</h4>
+        <div class="ellipsis-show2">
+          多行文字溢出 多行文字溢出 多行文字溢出 多行文字溢出 多行文字溢出 多行文字溢出 多行文字溢出 多行文字溢出
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>制造文本的模糊效果</h3></legend>
+    <div class="text-fuzzy">
+        文字模糊效果展示
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>动画实现简洁 loading 效果</h3></legend>
+    <div class="loading">
+
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>自定义文本选中样式</h3></legend>
+    <div class="element">
+      元素选中样式修改
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>顶角贴纸效果</h3></legend>
+    <div class="wrap">
+      <div class="ribbon">
+        <a href="#">Fork me on GitHub</a>
+      </div>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>input 占位符默认样式修改</h3></legend>
+    <input type="text"  placeholder="hello"/>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>移动端可点击元素去处默认边框</h3></legend>
+    <a href="#">hahdhfahdha</a>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>首字下沉</h3></legend>
+    <div class="first-word-down">
+      今日，明日，天天日
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>小三角</h3></legend>
+    <div>
+      <div class="triangle left"></div>
+      <div class="triangle right"></div>
+      <div class="triangle left right"></div>
+
+      <div class="triangle top display-inline-block"></div>
+      <div class="triangle bottom display-inline-block"></div>
+      <div class="triangle top bottom display-inline-block"></div>
+
+      <div class="triangle top"></div>
+      <div class="triangle bottom"></div>
+      <div class="triangle top bottom"></div>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>鼠标手型</h3></legend>
+    <div>
+      <a href="#">adfa</a>,
+      <input type="submit" value="提交">
+      <input type="image">
+      <input type="button" value="按钮">
+      <label for="">adfdfa</label>
+      <select name="" id="">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+      </select>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>屏蔽 Webkit 移动浏览器中元素高亮效果</h3></legend>
+    <div class="shield-highlight-for-mobile">
+      <select>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+      </select>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>table相邻单元格</h3></legend>
+    <table class="table-border">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>姓名</th>
+          <th>性别</th>
+          <th>年龄</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10001</td>
+          <td>王二</td>
+          <td>男</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>10002</td>
+          <td>张三</td>
+          <td>女</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>10003</td>
+          <td>李四</td>
+          <td>男</td>
+          <td>30</td>
+        </tr>
+      </tbody>
+    </table>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>移除浏览器部分元素的默认边框</h3></legend>
+    <div>
+      <img src="./imgs/about-icon04.png" />
+      <input type="text" />
+      <button>adfa</button>
+      <textarea name="" id="" cols="30" rows="10">adfaadfadfadfdas</textarea>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>取消部分浏览器数字输入控件的操作按钮</h3></legend>
+    <div>
+      <input type="number">
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>输入控件 placeholder 色设置 #999</h3></legend>
+    <div>
+      <input type="text" placeholder="hello">
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>利用绝对定位宽高拉升原理，中心居中元素</h3></legend>
+    <div>
+      <h4>1.位置和尺寸固定,margin自适应</h4>
+      <div class='wrap'>
+        <div class='item1'></div>
+      </div>
+    </div>
+    <div>
+      <h4>2.位置和margin固定，尺寸自适应</h4>
+      <div class="wrap">
+        <div class="item2"></div>
+      </div>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>强制换行/自动换行/强制不换行</h3></legend>
+    <div>
+      <h4>1.强制不换行</h4>
+      <div class='nowrap'>
+        强制不换行强制不换行强制不换行强制不换行强制不换行强制不换行
+      </div>
+    </div>
+    <div>
+      <h4>2.自动换行</h4>
+      <div class="auto-wrap">
+        自动换行自动换行自动换行自动换行自动换行自动换行自动换行
+      </div>
+    </div>
+    <div>
+      <h4>3.强制英文单词断行</h4>
+      <div class="force-en-word-wrap">
+        my-style cool-style self-style the-way-u-are
+      </div>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>table 边界的样式</h3></legend>
+    <table class="table-border-style">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>10001</td>
+        <td>王二</td>
+        <td>男</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <td>10002</td>
+        <td>张三</td>
+        <td>女</td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td>10003</td>
+        <td>李四</td>
+        <td>男</td>
+        <td>30</td>
+      </tr>
+      </tbody>
+    </table>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>绝对定位与 margin</h3></legend>
+    <div class="container">
+      <div class="content"></div>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>绝对定位与 transform</h3></legend>
+    <div class="container1">
+      <div class="content1">
+        <ul>
+          <li>21431</li>
+          <li>21431</li>
+          <li>21431</li>
+          <li>21431</li>
+          <li>21431</li>
+        </ul>
+      </div>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>flex 布局——水平垂直居中</h3></legend>
+    <div class="container-flex">
+      <div class="content-flex">
+        <ul>
+          <li>21431</li>
+          <li>21431</li>
+          <li>21431</li>
+          <li>21431</li>
+          <li>21431</li>
+        </ul>
+      </div>
+      <div class="content-flex">
+        <ul>
+          <li>21431</li>
+          <li>21431</li>
+          <li>21431</li>
+          <li>21431</li>
+          <li>21431</li>
+        </ul>
+      </div>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>图片上下左右居中</h3></legend>
+    <div class="img-middle">
+      <img src="./imgs/protection-icon01.png" alt="">
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>标题两边的小横杠</h3></legend>
+    <div class="column-title">这个贾克斯</div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>用 border 属性绘制元素</h3></legend>
+    <div class="triangle1"></div>
+    <div class="triangle2"></div>
+    <div class="trapezoid"></div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>用 border-radius 绘制元素</h3></legend>
+    <div>
+      <h4>圆柱</h4>
+      <div class="cylinder"></div>
+    </div>
+    <div>
+      <h4>蛋型</h4>
+      <div class="egg"></div>
+    </div>
+    <div>
+      <h4>圆</h4>
+      <div class="circle"></div>
+    </div>
+    <div>
+      <h4>半圆</h4>
+      <div class="lf-self-circle"></div>
+    </div>
+    <div>
+      <h4>椭圆</h4>
+      <div class="ty"></div>
+    </div>
+    <div>
+      <h4>1/4圆</h4>
+      <div class="quarter-botlf-cir"></div>
+    </div>
+    <div>
+      <h4>花瓣</h4>
+      <div class="flower"></div>
+    </div>
+    <div>
+      <h4>胶囊</h4>
+      <div class="level-capsule"></div>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>用 box-shadow 绘制元素</h3></legend>
+    <div class="pos-relative">
+      <div class="plus"></div>
+      <div class="target"></div>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>使用 CSS 渐变来绘制图标</h3></legend>
+    <div class="gradient"></div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>css实现形状</h3></legend>
+    <div>
+      <h4>心形</h4>
+      <div class="heart"></div>
+    </div>
+    <div>
+      <h4>相机</h4>
+      <div class="camera"></div>
+    </div>
+    <div>
+      <h4>月亮</h4>
+      <div class="moon"></div>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>文本缩进</h3></legend>
+    <div class="txt-width">
+      <div>
+        <h4>16px</h4>
+        <div class="text-indent">疯狂输出，给我冲！！！</div>
+      </div>
+      <div>
+        <h4>12px</h4>
+        <div class="text-indent-xs">疯狂输出，给我冲！！！</div>
+      </div>
+      <div>
+        <h4>14px</h4>
+        <div class="text-indent-sm">疯狂输出，给我冲！！！</div>
+      </div>
+      <div>
+        <h4>18px</h4>
+        <div class="text-indent-md">疯狂输出，给我冲！！！</div>
+      </div>
+      <div>
+        <h4>20px</h4>
+        <div class="text-indent-lg">疯狂输出，给我冲！！！</div>
+      </div>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>阴影效果</h3></legend>
+    <div class="shadow-effect">
+      <div>
+        <h4>文本阴影</h4>
+        <div class="shadow-text-xs">
+          冲啊
+        </div>
+      </div>
+      <div>
+        <h4>阴影xs</h4>
+        <div class="shadow-xs">
+          冲啊
+        </div>
+      </div>
+      <div>
+        <h4>阴影sm</h4>
+        <div class="shadow-sm">
+          冲啊
+        </div>
+      </div>
+      <div>
+        <h4>阴影md</h4>
+        <div class="shadow-md">
+          冲啊
+        </div>
+      </div>
+      <div>
+        <h4>阴影lg</h4>
+        <div class="shadow-lg">
+          冲啊
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><h3>圆角</h3></legend>
+    <div>
+      <div>
+        <div class="border-radius-xs border-line">
+          圆角xs
+        </div>
+      </div>
+      <div>
+        <div class="border-radius-sm border-line">
+          圆角sm
+        </div>
+      </div>
+      <div>
+        <div class="border-radius-md border-line">
+          圆角md
+        </div>
+      </div>
+      <div>
+        <div class="border-radius-lg border-line">
+          圆角lg
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</body>
+</html>
