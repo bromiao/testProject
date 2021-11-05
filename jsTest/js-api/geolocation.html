@@ -1,0 +1,86 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Where am I?</title>
+  <style>
+
+  </style>
+  <script>
+    window.onload = getMyLocation;
+
+    var zjj = {
+      //张家界的经纬度
+      latitude:29.667,
+      longitude:110.5
+    };
+
+    function getMyLocation() {
+      //判断浏览器是否支持地理API，若支持，则调用处理函数
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(displayLocation,displayError);
+      } else {
+        alert("Sorry,no geolocation support");
+      }
+    }
+
+    function displayLocation(position) {
+      //显示当前位置的经纬度
+      var latitude = parseFloat(position.coords.latitude).toFixed(2);
+      var longitude = parseFloat(position.coords.longitude).toFixed(2);
+
+      var div = document.getElementById('location');
+      div.innerHTML = 'You are at Latitude:' + latitude + ',Longitude:' + longitude;
+
+      //计算当前位置到张家界的距离，单位为千米
+      var km = computeDistance(position.coords,zjj);
+      document.getElementById('distance').innerHTML = 'You are ' +
+        km + ' km from the Zhangjiajie';
+    }
+
+    function displayError(error) {
+      //错误处理
+      var errorTypes = {
+        0:'Unknown error',
+        1:'Permission denied by user',
+        2:'Position is not available',
+        3:'Request timed out'
+      };
+      var errorMessage = errorTypes[error.code];
+      if (error.code == 0 || error.code == 2) {
+        errorMessage = errorMessage + ' ' + error.message;
+      }
+      document.getElementById('location').innerHTML = errorMessage;
+    }
+
+    function computeDistance(startCoords,destCoords) {
+      var startLatRads = degreesToRadians(startCoords.latitude);
+      var startLongRads = degreesToRadians(startCoords.longitude);
+      var destLatRads = degreesToRadians(destCoords.latitude);
+      var destLongRads = degreesToRadians(destCoords.longitude);
+
+      var Radius = 6371;
+      var distance = Math.acos(Math.sin(startLatRads) * Math.sin(destLatRads) +
+        Math.cos(startLatRads) * Math.cos(destLatRads) *
+        Math.cos(startLongRads - destLongRads)) * Radius;
+      return distance;
+    }
+
+    function degreesToRadians(degrees) {
+      var radians = (degrees * Math.PI)/180;
+      return radians;
+    }
+  </script>
+</head>
+
+<body>
+<div id="location">
+  Your location will go here.
+</div>
+<div id="distance">
+  Distance from Zhangjiajie will go here.
+</div>
+</body>
+
+</html>
