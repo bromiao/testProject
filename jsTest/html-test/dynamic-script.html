@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  if (location.search.includes('vlg=1')) {
+    let script = document.createElement('script');
+
+    script.src = 'https://unpkg.com/vconsole/dist/vconsole.min.js';
+    script.async = false;
+    
+    script.onload = function () {
+      new VConsole()
+    }
+
+    document.head.appendChild(script);
+  }
+</script>
+<!--<script>
+
+  function GetHttpRequest() {
+
+    if (window.XMLHttpRequest) // Gecko
+
+      return new XMLHttpRequest();
+
+    else if (window.ActiveXObject) // IE
+
+      return new ActiveXObject("MsXml2.XmlHttp");
+
+  }
+
+  function AjaxPage(sId, url) {
+
+    const oXmlHttp = GetHttpRequest();
+
+    oXmlHttp.OnReadyStateChange = function () {
+
+      if (oXmlHttp.readyState == 4) {
+
+        if (oXmlHttp.status == 200 || oXmlHttp.status == 304) {
+
+          IncludeJS(sId, url, oXmlHttp.responseText);
+
+        } else {
+
+          console.error("XML request error: " + oXmlHttp.statusText + " (" + oXmlHttp.status + ")");
+
+        }
+
+      }
+
+    }
+
+    oXmlHttp.open("GET", url, true);
+
+    oXmlHttp.send(null);
+
+  }
+
+  function IncludeJS(sId, fileUrl, source) {
+
+    if ((source != null) && (!document.getElementById(sId))) {
+
+      const oHead = document.getElementsByTagName("HEAD").item(0);
+
+      const oScript = document.createElement("script");
+
+      oScript.language = "javascript";
+
+      oScript.type = "text/javascript";
+
+      oScript.id = sId;
+
+      oScript.defer = true;
+
+      // oScript.text = source;
+      
+      oScript.src = fileUrl
+
+      oHead.appendChild(oScript);
+
+    }
+
+  }
+
+  AjaxPage("vconsole", "https://unpkg.com/vconsole/dist/vconsole.min.js");
+
+  console.log("主页面动态加载JS脚本。");
+
+  console.log("主页面动态加载a.js并取其中的变量：" + VConsole);
+
+</script>
+</script>-->
+</html>

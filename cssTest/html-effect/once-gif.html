@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--<img data-gifffer="./imgs/settings_y0.gif" id="settings"/>-->
+<img src="./imgs/settings_y0.gif" id="settings"/>
+</body>
+<script src="./gifffer.js"></script>
+<script>
+
+
+  // window.onload = function() {
+  //   const gifs = Gifffer({
+  //     playButtonStyles: {
+  //       'width': '60px',
+  //       'height': '60px',
+  //       'border-radius': '30px',
+  //       'background': 'rgba(0, 0, 0, 0.3)',
+  //       'position': 'absolute',
+  //       'top': '50%',
+  //       'left': '50%',
+  //       'margin': '-30px 0 0 -30px'
+  //     },
+  //     playButtonIconStyles: {
+  //       'width': '0',
+  //       'height': '0',
+  //       'border-top': '14px solid transparent',
+  //       'border-bottom': '14px solid transparent',
+  //       'border-left': '14px solid rgba(0, 0, 0, 0.5)',
+  //       'position': 'absolute',
+  //       'left': '26px',
+  //       'top': '16px'
+  //     }
+  //   });
+  //
+  //   setTimeout(() => {
+  //     const settings_img = document.querySelector('#settings')
+  //
+  //     settings_img.addEventListener('mouseenter', (e) => {
+  //       console.log(1111, gifs)
+  //       gifs[0].click()
+  //     })
+  //
+  //     settings_img.addEventListener('mouseleave', (e) => {
+  //       console.log(2222, gifs)
+  //       // gifs[0].click()
+  //     })
+  //   }, 1000)
+  // }
+
+  
+
+  var settings_img = document.getElementsByTagName("img")[0];
+
+  settings_img.stop();
+
+
+  settings_img.addEventListener('mouseenter', (e) => {
+    console.log(1111)
+    // 播放gif图片
+    settings_img.play();
+  })
+  settings_img.addEventListener('mouseleave', (e) => {
+    console.log(2222)
+    // 停止gif图片
+    settings_img.stop();
+  })
+</script>
+</html>

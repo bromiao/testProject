@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      body{
+          word-spacing: -5px; /* word-spcaing给一个足够大的负值，达到清除间距的效果 */
+      }
+      .box1{
+          display: inline-block;
+          width: 100px;
+          height: 100px;
+          background: pink;
+      }
+      .box2{
+          display: inline-block;
+          width: 100px;
+          height: 100px;
+          background: greenyellow;
+      }
+  </style>
+</head>
+<body>
+<!--编辑器换行 white-space的影响会有间距产生-->
+<div class="box1">111</div>
+<div class="box2">111</div>
+</body>
+</html>

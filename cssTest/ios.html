@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+      .site-header {
+          position: relative;
+          width: 100%;
+      }
+
+      /*------------------------------------------------------------
+      ## header-bar
+      ------------------------------------------------------------*/
+      .site-header .header-bar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 99999;
+          width: 100%;
+          padding: 20px 0;
+          text-align: center;
+          background: black ;
+      }
+
+      .header-bar .site-branding {
+          margin-bottom: 0;
+          font-size: 30px;
+          font-weight: 800;
+      }
+
+      .header-bar .site-branding a {
+          color: hsl(0, 0%, 100%);
+          text-decoration: none;
+      }
+
+      /*------------------------------------------------------------
+      ### site-navigation
+      ------------------------------------------------------------*/
+      /*
+        Hamburger Menu
+      ----------------------------------------*/
+      .hamburger-menu {
+          position: relative;
+          width: 100%;
+          max-width: 24px;
+          height: 22px;
+          margin-left: auto;
+          transition: .5s ease-in-out;
+          cursor: pointer;
+      }
+
+      .hamburger-menu span {
+          display: block;
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          background: #fff;
+          border-radius: 10px;
+          opacity: 1;
+          left: 0;
+          transition: .25s ease-in-out;
+      }
+
+      .hamburger-menu span:nth-child(1) {
+          top: 2px;
+      }
+
+      .hamburger-menu span:nth-child(2),
+      .hamburger-menu span:nth-child(3) {
+          top: 10px;
+      }
+
+      .hamburger-menu span:nth-child(4) {
+          top: 18px;
+      }
+
+      .hamburger-menu.open span:nth-child(1) {
+          top: 18px;
+          width: 0;
+          left: 50%;
+      }
+
+      .hamburger-menu.open span:nth-child(2) {
+          transform: rotate(45deg);
+      }
+
+      .hamburger-menu.open span:nth-child(3) {
+          transform: rotate(-45deg);
+      }
+
+      .hamburger-menu.open span:nth-child(4) {
+          top: 18px;
+          width: 0;
+          left: 50%;
+      }
+
+      .site-navigation {
+          position: absolute;
+          top: -11px;
+          right: 15px;
+          z-index: 9999  !important;
+          width: 100%;
+          /*     height: 22px; */
+          /*     overflow-x: hidden; */
+          list-style: none;
+          transition: all .35s;
+          color: hsl(0, 0%, 100%);
+      }
+
+      .site-navigation.show {
+          height: auto;
+      }
+
+      .site-navigation ul {
+          position: fixed;
+          top: 0;
+          left: -320px;
+          z-index: 9999  !important;
+          width: 250px;                                                               /*adddddd for cross of hamburger*/
+          height: 100vh;
+          overflow-x: scroll;
+          padding: 10px;
+          margin: 0;
+          background: #050505;
+          transition: all 0.35s;
+      }
+
+      .site-navigation.show ul {
+          left: 0;
+      }
+
+      .site-navigation ul li {
+          display: block;
+          padding: 15px 0;
+      }
+
+      .site-navigation ul li a {
+          display: block;
+          color: #fff;
+          transition: all 0.35s;
+          text-decoration: none;
+          font-size: 14px;
+          padding-left: 0px;
+      }
+
+      @media screen and (min-width: 992px) {
+          .site-navigation ul li a {
+              padding-left: 40px;
+          }
+          .header-bar .site-branding {
+              margin-left: 35px;
+          }
+          .site-navigation {
+              position: relative;
+              top: auto;
+              right: auto;
+              height: auto;
+              padding-right: 35px;
+              background: transparent;
+              z-index: 9999  !important;
+          }
+          .site-navigation ul {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: flex-end;
+              align-items: center;
+              position: relative;
+              top: auto;
+              left: auto;
+              width: 100%;
+              height: auto;
+              padding: 0;
+              overflow: auto;
+              background: transparent;
+              z-index: 9999  !important;
+          }
+          .site-navigation ul li {
+              padding: 0;
+          }
+          .site-navigation ul li a {
+              color: #fff;
+          }
+      }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-bar">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-10 col-lg-4">
+          <h1 class="site-branding flex">
+            <a href="index.html">INNOVATION</a>
+          </h1>
+        </div>
+
+        <div class="col-2 col-lg-8">
+          <nav class="site-navigation">
+            <div class="hamburger-menu d-lg-none">
+              <span onclick="void(0)"></span>
+              <span onclick="void(0)"></span>
+              <span onclick="void(0)"></span>
+              <span onclick="void(0)"></span>
+            </div><!-- .hamburger-menu -->
+
+            <ul>
+              <img id="mylogo" src="img.jpeg" height="130" width="130">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="index.html#redirect1">EVENTS</a></li>
+              <li><a href="#">GALLERY</a></li>
+              <li><a href="#">SPONSORS</a></li>
+              <li><a href="#">ACCOMODATION</a></li>
+              <li><a href="#">CONTACT US</a></li>
+              <li><a href="#">ABOUT</a></li>
+            </ul><!-- flex -->
+          </nav><!-- .site-navigation -->
+        </div><!-- .col-12 -->
+      </div><!-- .row -->
+    </div><!-- container-fluid -->
+  </div><!-- header-bar -->
+</header><!-- .site-header -->
+</body>
+<script>
+  (function($) {
+    $('.hamburger-menu').on('click', function() {
+      $(this).toggleClass('open');
+      $('.site-navigation').toggleClass('show')
+    });
+  })(jQuery)
+</script>
+</html>
