@@ -1,0 +1,116 @@
+<!--
+ * @Author: MasterJ
+ * @Date: 2022-08-24 10:46
+ * @Description TODO
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+      mark {
+          background-color: green;
+          color: #FFFFFF;
+      }
+  </style>
+</head>
+<body>
+  <details>
+    <summary>Click Here to get the user details</summary>
+    <table>
+      <tr>
+        <th>序号</th>
+        <th>姓名</th>
+        <th>地址</th>
+        <th>工作</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Rose</td>
+        <td>北京</td>
+        <td>Web前端</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jack</td>
+        <td>上海</td>
+        <td>产品测试</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Tom</td>
+        <td>南京</td>
+        <td>数据分析</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Jerry</td>
+        <td>杭州</td>
+        <td>网络安全</td>
+      </tr>
+    </table>
+  </details>
+
+  <ul class="content-editable" contenteditable>
+    <li> 1. 数据一
+    <li> 2. 数据二
+    <li> 3. 数据三
+  </ul>
+
+  <p> 普通文本 <mark>突出显示的文本</mark></p>
+  
+  <form action="" method="get">
+    <label for="boyfriend">请选择您心仪的男朋友</label>
+    <input list="boyfriends" name="boyfriend" id="boyfriend">
+    <datalist id="boyfriends">
+      <option value="张清博">
+      <option value="彭于晏">
+      <option value="梁朝伟">
+      <option value="胡歌">
+      <option value="吴彦祖">
+    </datalist>
+    <input type="submit">
+  </form>
+
+  <form method="post">
+    <input
+        type="range"
+        name="range"
+        min="0"
+        max="100"
+        step="1"
+        value=""/>
+  </form>
+
+
+  <p>指定最大10 占用4</p>
+  <meter id="home" value="4" min="0" max="10">4/10</meter><br>
+
+  <p>直接占用总长70%</p>
+  <meter id="root" value="0.7">70%</meter>
+
+  <form action="">
+    <input type="text" id="username1" name="username" required autofocus>
+    <button>submit</button>
+  </form>
+
+  <!--正确格式：6-20位且必须包含数字以及大小写字母-->
+  <form action="">
+    <input 
+      type="password"
+      name="password"
+      id="password"
+      placeholder="6-20 chars, at least 1 digit, 1 uppercase and one lowercase letter"
+      pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$"
+      autofocus
+      required
+    />
+    <button>submit</button>
+  </form>
+
+
+  <input type="color">
+  <p id="colorMe">点击选择颜色</p>
+</body>
+</html>
