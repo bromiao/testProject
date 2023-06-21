@@ -81,5 +81,5 @@ let betterZeroTimeout = () => {
   }, 0);
 }
 
-console.table('origin', oriSetTimeout());
+// console.table('origin', oriSetTimeout());
 console.table('origin', betterZeroTimeout());

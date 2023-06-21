@@ -1,0 +1,25 @@
+POST https://electron.imiuj.com/mytio/user/updatUser.tio_x HTTP/1.1
+Host: electron.imiuj.com
+Connection: keep-alive
+Content-Length: 88
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98"
+sec-ch-ua-mobile: ?0
+tios: 1666327482470354944
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Mango/4.21.1 Chrome/98.0.4758.141 Electron/17.4.11 Safari/537.36
+tio_session: 1666327482470354944
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json, text/plain, */*
+tiov: null
+tiou: 178624
+tiot: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0aW9kIjoidGlvX2NhOGM3ZjA0LTc2NGEtNGQyYi1hN2NlLTk3N2JmNjJlMjgwYSIsInRpb3UiOiIxNzg2MjQifQ.UdEDvbDcyUYfDLDiHft_eUyqd9L87j-e68TDv4lhSwk
+tio-appname: Mango
+tiod: tio_ca8c7f04-764a-4d2b-a7ce-977bf62e280a
+tio-appversion: 4.21.1
+sec-ch-ua-platform: "Windows"
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN
+
+nick=TY-MasterJ-%E5%89%8D%E7%AB%AF1&sign=1234567&tio-appversion=4.21.1&p_is_win=p_is_win

@@ -1,0 +1,95 @@
+{
+  "code":"0000000",
+  "data":[
+    {
+      "context":"网球赛事：2023/01/25 11:00 ITF M15雅加达 - 男单 （尤塔娜·查龙 VS 托马斯·范库特）- 因托马斯·范库特在第1盘第7局结束后赛事中途弃赛，除了已有明确结果的注单以外，所有受影响的注单一律视为无效，连串注单该场赛事相关盘口赔率以（1）计算。请再次检查您的注单，造成不便之处，敬请见谅.\n",
+      "id":"87498",
+      "isShuf":1,
+      "isTop":0,
+      "noticeType":3,
+      "noticeTypeName":"网球赛事",
+      "sendTime":"01/25/23",
+      "sendTimeOther":null,
+      "title":"因托马斯·范库特在第1盘第7局结束后赛事中途弃赛"
+    },
+    {
+      "context":"网球赛事：2023/01/25 10:00 澳大利亚公开赛 - 男双 - 因客队名称错误, 中文名 (Granollers·M / Zeballos·H) 变更为 (马塞尔·格拉诺勒斯 / 奥拉西奥·泽巴洛斯), 有关此联赛名投注皆为有效，所有注单一律正常结算.",
+      "id":"87497",
+      "isShuf":1,
+      "isTop":0,
+      "noticeType":3,
+      "noticeTypeName":"网球赛事",
+      "sendTime":"01/25/23",
+      "sendTimeOther":null,
+      "title":"因客队名称错误"
+    },
+    {
+      "context":"足球赛事：2023/01/24 18:30 球会友谊赛（布里斯班城 VS 黄金海岸联）- 因比赛延期，所有注单一律视为无效。连串注单该场赛事相关盘口赔率以（1）计算。请再次检查您的注单，造成不便之处，敬请见谅！",
+      "id":"87496",
+      "isShuf":1,
+      "isTop":0,
+      "noticeType":1,
+      "noticeTypeName":"足球赛事",
+      "sendTime":"01/25/23",
+      "sendTimeOther":null,
+      "title":"比赛延期"
+    },
+    {
+      "context":"足球赛事：2023/01/25 04:00 英格兰联赛杯（南安普顿 VS 纽卡斯尔联）- 因进球无效，所有在（GMT+8）2023/01/25 05:37:33 - 2023/01/25 05:39:01 产生的相关受影响注单一律视为无效。连串注单该场赛事相关盘口赔率以（1）计算。请再次检查您的注单，造成不便之处，敬请见谅！",
+      "id":"87495",
+      "isShuf":1,
+      "isTop":0,
+      "noticeType":1,
+      "noticeTypeName":"足球赛事",
+      "sendTime":"01/25/23",
+      "sendTimeOther":null,
+      "title":"进球无效"
+    },
+    {
+      "context":"网球赛事：2023/01/25 02:00 ATP奥蒂尼新鲁汶挑战赛 - 男单（卢卡斯·克莱恩 VS 利亚姆·布罗迪）- 因赛前更换选手，所有注单一律视为无效。连串注单该场赛事相关盘口赔率以（1）计算。请再次检查您的注单，造成不便之处，敬请见谅！",
+      "id":"87494",
+      "isShuf":1,
+      "isTop":0,
+      "noticeType":3,
+      "noticeTypeName":"网球赛事",
+      "sendTime":"01/25/23",
+      "sendTimeOther":null,
+      "title":"赛前更换选手"
+    },
+    {
+      "context":"足球赛事：2023/01/25 03:30 德国甲级联赛 (霍芬海姆 VS 斯图加特) -因提供（第1个角球）盘口错误，所有在（GMT+8）2023/01/25 03:33:34 - 2023/01/25 03:37:39 产生的相关受影响注单一律视为无效。连串注单该场赛事相关盘口赔率以（1）计算。请再次检查您的注单，造成不便之处，敬请见谅！\n",
+      "id":"87493",
+      "isShuf":1,
+      "isTop":0,
+      "noticeType":1,
+      "noticeTypeName":"足球赛事",
+      "sendTime":"01/25/23",
+      "sendTimeOther":null,
+      "title":"因提供盘口错误"
+    },
+    {
+      "context":"足球赛事：2023/01/25 03:45 英格兰甲级联赛（伯顿 VS 彼德堡联）- 因天气因素导致比赛延期，所有注单一律视为无效，连串注单该场赛事相关盘口赔率以（1）计算。 请再次检查您的注单，造成不便之处，敬请见谅！\n",
+      "id":"87492",
+      "isShuf":1,
+      "isTop":0,
+      "noticeType":1,
+      "noticeTypeName":"足球赛事",
+      "sendTime":"01/25/23",
+      "sendTimeOther":null,
+      "title":"比赛延期"
+    },
+    {
+      "context":"2023-01-25&nbsp;01:00:00&nbsp;ESEA&nbsp;Advanced&nbsp;-&nbsp;欧洲（ALTERNATE&nbsp;aTTaX&nbsp;VS&nbsp;ampiainensuoja），因队伍（ampiainensuoja）选手弃权，所有受影响的注单一律视为无效，连串注单以（1）计算，请再次检查您的注单，造成不便之处，敬请见谅！",
+      "id":"87491",
+      "isShuf":1,
+      "isTop":0,
+      "noticeType":34,
+      "noticeTypeName":"CS:GO赛事",
+      "sendTime":"01/25/23",
+      "sendTimeOther":null,
+      "title":"赛事弃权-CS:GO-ESEA&nbsp;Advanced&nbsp;-&nbsp;欧洲-（ALTERNATE&nbsp;aTTaX&nbsp;VS&nbsp;ampiainensuoja）"
+    }
+  ],
+  "msg":"成功",
+  "ts":1674631486177
+}

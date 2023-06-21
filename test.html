@@ -1,0 +1,176 @@
+<!--
+ * @Author: MasterJ
+ * @Date: 2023-06-06 15:45
+ * @Description TODO
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="file" onchange="uploadImg()">
+<button onclick="updateAvatar()">修改avatar地址</button>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+<script>
+  function uploadImg(e) {
+    var e = window.event || event;
+    console.log(e)
+    // 获取当前选中的文件
+    var file = e.target.files[0];
+    console.log(file, '获取当前选中的文件');//打印值看下面图片,简单点的话我们直接把这个数据给后台处理就可以了
+    let reader = new FileReader()
+    //将上传的文件读取成text
+    reader.onload = function () {
+      console.log(1111, file);
+      console.log(2222, reader.result);
+
+      // var formData = new FormData();
+      // formData.append(file.name, file);
+      //
+      // console.log(132134, formData)
+      // $.ajax({
+      //   url: '/upload',
+      //   type: 'POST',
+      //   dataType: 'json',
+      //   data: formData,
+      //   contentType: false,
+      //   processData: false,
+      //   headers: {
+      //    
+      //   },
+      //   success: function (data, textStatus) {
+      //     // data could be xmlDoc, jsonObj, html, text, etc...
+      //     // the options for this ajax request
+      //   },
+      //   error: function (XMLHttpRequest, textStatus, errorThrown) {
+      //     // 通常情况下textStatus和errorThown只有其中一个有值 
+      //     // the options for this ajax request
+      //   }
+      // })
+
+      let FromData = new FormData();
+      FromData.append("uploadFile", file);
+      let xhr = new XMLHttpRequest()   //new一个XMLHttpRequest对象
+      xhr.open('POST', 'https://electron.imjz0.com/mytio/user/updateAvatar.tio_x', true)  //第三个参数代表是否异步
+      const secChUa = `" Not A;Brand";v="99", "Chromium";v="98"`
+      const requestHeaderObj = {
+        'Connection': 'keep-alive',
+        "sec-ch-ua": secChUa,
+        "sec-ch-ua-mobile": `?0`,
+        "tios": "1665608612541251584",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Mango/4.21.1 Chrome/98.0.4758.141 Electron/17.4.11 Safari/537.36",
+        "tio_session": "1665608612541251584",
+        "Accept": "application/json, text/plain, */*",
+        "tiou": 178624,
+        "tiov": null,
+        "tiot": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0aW9kIjoidGlvX2NhOGM3ZjA0LTc2NGEtNGQyYi1hN2NlLTk3N2JmNjJlMjgwYSIsInRpb3UiOiIxNzg2MjQifQ.UdEDvbDcyUYfDLDiHft_eUyqd9L87j-e68TDv4lhSwk",
+        "tio-appname": 'Mango',
+        "tiod": 'tio_ca8c7f04-764a-4d2b-a7ce-977bf62e280a',
+        "tio-appversion": '4.21.1',
+        "sec-ch-ua-platform": "Windows",
+        "Sec-Fetch-Site": "cross-site",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Dest": "empty",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "zh-CN",
+      }
+      
+      for (let [key, value] of Object.entries(requestHeaderObj)) {
+        xhr.setRequestHeader(key, value)
+      }
+      // xhr.setRequestHeader("filename", file.name)
+      // xhr.setRequestHeader("path", "/")
+      // xhr.setRequestHeader("Content-Type", "touchsprite/uploadfile")
+      // xhr.setRequestHeader("root", "lua")
+      // xhr.send(file)   //发送请求
+      xhr.send(FromData)   //发送请求
+      xhr.onreadystatechange = ((e) => {
+        //请求之后的回调函数
+        console.log(3333, e)
+      })
+    }
+    reader.readAsText(file)
+    // reader.readAsDataURL(file)
+
+  }
+  
+  
+  function updateAvatar() {
+    const secChUa = `" Not A;Brand";v="99", "Chromium";v="98"`
+    const requestHeaderObj = {
+      'Connection': 'keep-alive',
+      "sec-ch-ua": secChUa,
+      "sec-ch-ua-mobile": `?0`,
+      "tios": "1666327482470354944",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Mango/4.21.1 Chrome/98.0.4758.141 Electron/17.4.11 Safari/537.36",
+      "tio_session": "1666327482470354944",
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Accept": "application/json, text/plain, */*",
+      "tiou": 178624,
+      "tiov": null,
+      "tiot": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0aW9kIjoidGlvX2NhOGM3ZjA0LTc2NGEtNGQyYi1hN2NlLTk3N2JmNjJlMjgwYSIsInRpb3UiOiIxNzg2MjQifQ.UdEDvbDcyUYfDLDiHft_eUyqd9L87j-e68TDv4lhSwk",
+      "tio-appname": 'Mango',
+      "tiod": 'tio_ca8c7f04-764a-4d2b-a7ce-977bf62e280a',
+      "tio-appversion": '4.21.1',
+      "sec-ch-ua-platform": "Windows",
+      "Sec-Fetch-Site": "cross-site",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "zh-CN",
+    }
+    
+    let xhr = new XMLHttpRequest()   //new一个XMLHttpRequest对象
+    xhr.open('POST', 'https://electron.imiuj.com/mytio/user/updatUser.tio_x', true)  //第三个参数代表是否异步
+    // xhr.open('POST', 'https://electron.imjz0.com/mytio/user/updatSign.tio_x', true)  //第三个参数代表是否异步
+
+    for (let [key, value] of Object.entries(requestHeaderObj)) {
+      xhr.setRequestHeader(key, value)
+    }
+    // xhr.setRequestHeader("filename", file.name)
+    // xhr.setRequestHeader("path", "/")
+    // xhr.setRequestHeader("Content-Type", "touchsprite/uploadfile")
+    // xhr.setRequestHeader("root", "lua")
+    // xhr.send(file)   //发送请求
+    // xhr.send('sign=123456&nick=TY-MasterJ-%E5%89%8D%E7%AB%AF&tio-appversion=4.21.1&p_is_win=p_is_win')   //发送请求
+    xhr.send('sign=不羡鸳鸯不羡仙，一行代码调半天！&nick=TY-MasterJ-前端&avatar=user\/avatar\/1666369614038421504\.gif&initialAvatar=true&tio-appversion=4.21.1&p_is_win=p_is_win')   //发送请求
+    xhr.onreadystatechange = ((e) => {
+      //请求之后的回调函数
+      console.log(3333, e)
+    })
+
+    // tio-appversion=4.21.1&p_is_win=p_is_win
+    // $.ajax({
+    //   url: 'https://electron.imjz0.com/mytio/user/updatUser.tio_x',
+    //   type: 'POST',
+    //   dataType: 'json',
+    //   data: {
+    //     // nick: 'TY-MasterJ-前端',
+    //     sign: '123456',
+    //     nick: 'TY-MasterJ-%E5%89%8D%E7%AB%AF',
+    //     "tio-appversion": '4.21.1',
+    //     p_is_win: 'p_is_win'
+    //   },
+    //   contentType: false,
+    //   processData: false,
+    //   headers: {
+    //     ...requestHeaderObj
+    //   },
+    //   success: function (data, textStatus) {
+    //     // data could be xmlDoc, jsonObj, html, text, etc...
+    //     // the options for this ajax request
+    //     console.log(1122, data)
+    //   },
+    //   error: function (XMLHttpRequest, textStatus, errorThrown) {
+    //     // 通常情况下textStatus和errorThown只有其中一个有值 
+    //     // the options for this ajax request
+    //     console.log(1133, XMLHttpRequest)
+    //   }
+    // })
+  }
+
+</script>
+</html>

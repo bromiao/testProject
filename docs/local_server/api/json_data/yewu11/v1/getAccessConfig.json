@@ -1,0 +1,19 @@
+{
+  "code":"0000000",
+  "data":{
+    "activitySwitch":true,
+    "collectSwitch":true,
+    "filterSwitch":true,
+    "handicapNum":true,
+    "hotMatchNum":true,
+    "hotRecommend":true,
+    "multiColumn":true,
+    "playAllShow":true,
+    "recentSwitch":true,
+    "searchSwitch":true,
+    "sortCut":true,
+    "statisticsSwitch":true
+  },
+  "msg":"成功",
+  "ts":1674630843290
+}

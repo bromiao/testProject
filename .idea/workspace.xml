@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9e861412-71ea-46c7-9b5d-bf7a708b5515" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/001.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/002.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/003.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cssTest/dplayer/demo/DPlayer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cssTest/dplayer/demo/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cssTest/dplayer/demo/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cssTest/dplayer/demo/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cssTest/dplayer/demo/modernizr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jsTest/Array/EnumArray.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jsTest/function-achieve/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jsTest/iframe/iframe-header-token.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cssTest/jsTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/cssTest/jsTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsTest/function-achieve/better-zero-timeout.js" beforeDir="false" afterPath="$PROJECT_DIR$/jsTest/function-achieve/better-zero-timeout.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="ProjectId" id="2718FdJv1TlAZh7y1OnE6WPAWbE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Mango/resources/app" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\testProject\testProject\cssTest\html-effect\imgs" />
+      <recent name="D:\testProject\testProject\cssTest\html-effect" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="convert-output.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/jsTest/function-achieve/convert-output.js" working-dir="$PROJECT_DIR$/jsTest/function-achieve">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.convert-output.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9e861412-71ea-46c7-9b5d-bf7a708b5515" name="Changes" comment="" />
+      <created>1648476128530</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648476128530</updated>
+      <workItem from="1648476130073" duration="1194000" />
+      <workItem from="1649594357268" duration="4317000" />
+      <workItem from="1650097301242" duration="695000" />
+      <workItem from="1650100780658" duration="1478000" />
+      <workItem from="1650172508136" duration="1245000" />
+      <workItem from="1650205575385" duration="94000" />
+      <workItem from="1650248733574" duration="1873000" />
+      <workItem from="1650691816721" duration="1210000" />
+      <workItem from="1651029393358" duration="370000" />
+      <workItem from="1651477097480" duration="18189000" />
+      <workItem from="1651543516306" duration="1465000" />
+      <workItem from="1651568919755" duration="1544000" />
+      <workItem from="1651583103953" duration="620000" />
+      <workItem from="1651648854354" duration="1708000" />
+      <workItem from="1651717225859" duration="17000" />
+      <workItem from="1651721023546" duration="894000" />
+      <workItem from="1651735534620" duration="602000" />
+      <workItem from="1653207801685" duration="1462000" />
+      <workItem from="1653271503232" duration="2435000" />
+      <workItem from="1653358974905" duration="1272000" />
+      <workItem from="1653934986434" duration="1536000" />
+      <workItem from="1654049799427" duration="8000" />
+      <workItem from="1654682443161" duration="1008000" />
+      <workItem from="1657249183744" duration="503000" />
+      <workItem from="1658027915142" duration="5460000" />
+      <workItem from="1658294119792" duration="1727000" />
+      <workItem from="1659099561973" duration="1084000" />
+      <workItem from="1659942642971" duration="5010000" />
+      <workItem from="1660012547808" duration="332000" />
+      <workItem from="1660100767634" duration="2941000" />
+      <workItem from="1660287967890" duration="1407000" />
+      <workItem from="1661309113340" duration="996000" />
+      <workItem from="1665553630891" duration="1485000" />
+      <workItem from="1668403231827" duration="2740000" />
+      <workItem from="1668479471548" duration="593000" />
+      <workItem from="1669568654551" duration="942000" />
+      <workItem from="1670596891283" duration="1258000" />
+      <workItem from="1679467892585" duration="506000" />
+      <workItem from="1679729905683" duration="3045000" />
+      <workItem from="1680069231474" duration="3037000" />
+      <workItem from="1680229937528" duration="68000" />
+      <workItem from="1685761150280" duration="4242000" />
+      <workItem from="1685846414696" duration="596000" />
+      <workItem from="1685847132716" duration="596000" />
+      <workItem from="1685932928008" duration="595000" />
+      <workItem from="1686017907669" duration="10900000" />
+      <workItem from="1686104849532" duration="4987000" />
+      <workItem from="1686117920075" duration="7010000" />
+      <workItem from="1686277785159" duration="1200000" />
+      <workItem from="1686363454372" duration="593000" />
+      <workItem from="1686450087324" duration="595000" />
+      <workItem from="1686473425796" duration="80000" />
+      <workItem from="1686627640928" duration="1300000" />
+      <workItem from="1686653263481" duration="1426000" />
+      <workItem from="1686709969967" duration="1181000" />
+      <workItem from="1686882210090" duration="594000" />
+      <workItem from="1686898449568" duration="56000" />
+    </task>
+    <task id="LOCAL-00001" summary="add some new">
+      <created>1660103318053</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1660103318053</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add some new" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some new" />
+  </component>
+</project>

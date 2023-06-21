@@ -3,16 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <script src="https://lodash.com/vendor/cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
 </head>
 <body>
-
+<img src="./a.png" id="t_img" alt="">
 </body>
 <script>
-  function foo(...args) {
-    var target = (...args1) => foo(...[...args, ...args1]);
-    target.getValue = () => args.reduce((p,c) => p + c, 0);
-    return target;
-  }
-  console.log(foo(1)(2,3)(4)(5,6).getValue())
+  // function foo(...args) {
+  //   var target = (...args1) => foo(...[...args, ...args1]);
+  //   target.getValue = () => args.reduce((p,c) => p + c, 0);
+  //   return target;
+  // }
+  // console.log(foo(1)(2,3)(4)(5,6).getValue())
+  var img = document.querySelector('#t_img')
+      img.onerror = (e) => {
+        console.log(1111)
+        e.target.src = './b.png'
+        e.target.onerror = null
+      }
+  
+  
+  // window.addEventListener('error', (e) => {
+  //   console.log(2222)
+  //   var dom = event.target;
+  //   if (!/img/i.test(dom.nodeName)) {
+  //     return;
+  //   }
+  //  
+  //   var o = _.cloneDeep(e)
+  //   console.log(1111, o)
+  //   // if (dom.onerror) {
+  //   //   dom.onerror()
+  //   // } else {
+  //   //   dom.onerror = null;
+  //   // }
+  // }, true)
 </script>
 </html>
