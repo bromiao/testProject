@@ -28,26 +28,9 @@ router.post('/post',(req,res) => {
 
 const api_map = require('./api_map')
 
-router.post('/notice/headList', (req, res) => {
-  res.send(api_map['headList'])
+router.get('/order/betRecord/countUnsettleTickets', (req, res) => {
+  res.send(api_map['countUnsettleTickets'])
 })
-router.get('/w/menu/hotList', (req, res) => {
-  res.send(api_map['hotList'])
-})
-router.get('/m/menu/getMenuVideos', (req, res) => {
-  res.send(api_map['getMenuVideos'])
-})
-router.post('/menu/getDateMenuList', (req, res) => {
-  res.send(api_map['getDateMenuList'])
-})
-router.post('/w/menu/queryPlayCount', (req, res) => {
-  res.send(api_map['queryPlayCount'])
-})
-router.get('/w/menu/init', (req, res) => {
-  res.send(api_map['init2'])
-})
-router.get('/festival/queryBanner', (req, res) => {
-  res.send(api_map['queryBanner'])
-})
+
 
 module.exports = router

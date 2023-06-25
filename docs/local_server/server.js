@@ -37,10 +37,14 @@ app.get('/api/list', (req, res) => {
 const yewu11_v1 = require('./api/yewu11_v1')
 const yewu11_v2 = require('./api/yewu11_v2')
 const yewu12 = require('./api/yewu12')
+const yewu13 = require('./api/yewu13')
+const yewu19_v1 = require('./api/yewu19_v1')
 // 把路由模块,注册到app上
 app.use('/yewu11/v1', yewu11_v1)
 app.use('/yewu11/v2', yewu11_v2)
 app.use('/yewu12', yewu12)
+app.use('/yewu13', yewu13)
+app.use('/yewu19/v1', yewu19_v1)
 
 /* 监听端口 */
 app.listen(80, () => {

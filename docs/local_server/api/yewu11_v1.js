@@ -72,5 +72,105 @@ router.get('/tournamentRanking/getRankingByTournamentId', (req, res) => {
 router.get('/w/getVideos', (req, res) => {
   res.send(api_map['getVideos'])
 })
+router.post('/w/structureTournamentMatches', (req, res) => {
+  res.send(api_map['structureTournamentMatches'])
+})
+router.post('/searchSettings/getHotPush', (req, res) => {
+  res.send(api_map['getHotPush'])
+})
+router.get('/w/matchDetail/getMatchDetail', (req, res) => {
+  res.send(api_map['getMatchDetail'])
+})
+router.get('/w/category/getCategoryList', (req, res) => {
+  const {sportId} = req.query
+  if (['100', '101', '102', '103'].includes(sportId)) {
+    return res.send(api_map['getCategoryList2'])
+  }
+  res.send(api_map['getCategoryList'])
+})
+router.post('/w/playbackVideoUrl', (req, res) => {
+  res.send(api_map['playbackVideoUrl'])
+})
+router.post('/w/structureMatchBaseInfoByMids', (req, res) => {
+  res.send(api_map['structureMatchBaseInfoByMids'])
+})
+router.post('/w/getLatestVideo', (req, res) => {
+  res.send(api_map['getLatestVideo'])
+})
+router.post('/w/matchDetail/getMatchOddsInfo2', (req, res) => {
+  res.send(api_map['getMatchOddsInfo2'])
+})
+router.get('/w/matchDetail/addVisitHistory', (req, res) => {
+  res.send(api_map['addVisitHistory'])
+})
+router.get('/w/matchDetail/getVisitHistory', (req, res) => {
+  res.send(api_map['getVisitHistory'])
+})
+router.get('/w/matchDetail/getMatchOddsInfo1', (req, res) => {
+  res.send(api_map['getMatchOddsInfo1'])
+})
+router.post('/w/liveVideoUrl', (req, res) => {
+  res.send(api_map['liveVideoUrl'])
+})
+router.post('/w/isLogin', (req, res) => {
+  res.send(api_map['isLogin'])
+})
+router.get('/w/getFilterMatchList', (req, res) => {
+  res.send(api_map['getFilterMatchList'])
+})
+router.post('/w/structureLiveMatches', (req, res) => {
+  res.send(api_map['structureLiveMatches'])
+})
+router.post('/w/menu/countCollectTotal', (req, res) => {
+  res.send(api_map['countCollectTotal'])
+})
+router.post('/w/esports/getDateMenuList', (req, res) => {
+  res.send(api_map['getDateMenuList2'])
+})
+router.post('/w/esportsTournamentMatches', (req, res) => {
+  res.send(api_map['esportsTournamentMatches'])
+})
+router.get('/w/5esportsMatches', (req, res) => {
+  res.send(api_map['_5esportsMatches'])
+})
+router.get('/w/hotEsportsMatches', (req, res) => {
+  res.send(api_map['hotEsportsMatches'])
+})
+router.post('/w/esportsMatchInfoByMids', (req, res) => {
+  res.send(api_map['esportsMatchInfoByMids'])
+})
+router.get('/w/matchDetail/getESMatchDetail', (req, res) => {
+  res.send(api_map['getESMatchDetail'])
+})
+router.post('/w/virtualProMatches', (req, res) => {
+  res.send(api_map['virtualProMatches'])
+})
+router.post('/w/virtualReplay', (req, res) => {
+  res.send(api_map['virtualReplay'])
+})
+router.post('/w/virtual/getVirtualSportTeamRanking', (req, res) => {
+  res.send(api_map['getVirtualSportTeamRanking'])
+})
+router.get('/w/virtual/getVideoMaxTime', (req, res) => {
+  res.send(api_map['getVideoMaxTime'])
+})
+router.get('/w/matchDetail/getVirtualMatchResult', (req, res) => {
+  res.send(api_map['getVirtualMatchResult'])
+})
+router.get('/w/virtual/menus', (req, res) => {
+  res.send(api_map['menus'])
+})
+router.post('/w/virtual/getMatchScore', (req, res) => {
+  res.send(api_map['getMatchScore'])
+})
+router.get('/w/matchDetail/getVirtualMatchDetail', (req, res) => {
+  res.send(api_map['getVirtualMatchDetail'])
+})
+router.get('/w/matchDetail/getVirtualMatchOddsInfo', (req, res) => {
+  res.send(api_map['getVirtualMatchOddsInfo'])
+})
+router.get('/w/matchDetail/getESMatchOddsInfo', (req, res) => {
+  res.send(api_map['getESMatchOddsInfo'])
+})
 
 module.exports = router
