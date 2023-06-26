@@ -1,0 +1,46 @@
+1. 循环中 相关耗时逻辑 抽离
+2. 缓存处理
+3. 针对合并操作  应先去重 再合并
+4. 提前退出 尽早结束无意义的代码
+
+
+
+
+1. 不常变动的 缓存组件 keep-alive 
+2. 纯函数组件 替代一般组件 避免不必要的组件初始化带来的性能开销
+3. 资源/组件 动态引入
+
+
+
+
+vue-fragment
+
+
+
+安装npm：sudo apt install npm
+安装asar：npm install asar
+编译命令:asar pack you-project app.asar
+反编译命令:asar extract app.asar ./myapp
+
+
+
+
+exports.__esModule = true;
+
+
+ip.addr == 110.242.68.4 and icmp 表示只显示ICPM协议且源主机IP或者目的主机IP为110.242.68.4 的数据包
+
+
+IP 过滤 比如 ip.src ==192.168.1.102 显示源地址为192.168.1.102， ip.dst==192.168.1.102, 目标地址为192.168.1.102
+
+Http模式过滤 http.request.method=="GET", 只显示HTTP GET方法的
+
+**http.host==**53zaixian.com
+
+http.host contains 53zaixian.com
+
+
+过滤抓取53域名的http请求
+
+http.host contains 53zaixian.com
+
