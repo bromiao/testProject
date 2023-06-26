@@ -13,6 +13,7 @@ const getVideos = require('./json_data/yewu11/v1/getVideos.json')
 const structureTournamentMatches = require('./json_data/yewu11/v1/structureTournamentMatches.json')
 const getHotPush = require('./json_data/yewu11/v1/getHotPush.json')
 const getMatchDetail = require('./json_data/yewu11/v1/getMatchDetail.json')
+const getMatchDetail2 = require('./json_data/yewu11/v1/getMatchDetail2.json')
 const getCategoryList = require('./json_data/yewu11/v1/getCategoryList.json')
 const getCategoryList2 = require('./json_data/yewu11/v1/getCategoryList2.json')
 const playbackVideoUrl = require('./json_data/yewu11/v1/playbackVideoUrl.json')
@@ -30,6 +31,7 @@ const countCollectTotal = require('./json_data/yewu11/v1/countCollectTotal.json'
 const getDateMenuList2 = require('./json_data/yewu11/v1/getDateMenuList.json')
 const esportsTournamentMatches = require('./json_data/yewu11/v1/esportsTournamentMatches.json')
 const _5esportsMatches = require('./json_data/yewu11/v1/_5esportsMatches.json')
+const esportsMatches = require('./json_data/yewu11/v1/esportsMatches.json')
 const hotEsportsMatches = require('./json_data/yewu11/v1/hotEsportsMatches.json')
 const esportsMatchInfoByMids = require('./json_data/yewu11/v1/esportsMatchInfoByMids.json')
 const getESMatchDetail = require('./json_data/yewu11/v1/getESMatchDetail.json')
@@ -96,6 +98,7 @@ module.exports = {
   details,
   getHotPush,
   getMatchDetail,
+  getMatchDetail2,
   getCategoryList,
   getCategoryList2,
   playbackVideoUrl,
@@ -113,6 +116,7 @@ module.exports = {
   getDateMenuList2,
   esportsTournamentMatches,
   _5esportsMatches,
+  esportsMatches,
   hotEsportsMatches,
   esportsMatchInfoByMids,
   getESMatchDetail,

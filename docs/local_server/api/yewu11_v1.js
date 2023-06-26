@@ -81,7 +81,17 @@ router.post('/searchSettings/getHotPush', (req, res) => {
 router.get('/w/matchDetail/getMatchDetail', (req, res) => {
   res.send(api_map['getMatchDetail'])
 })
+router.get('/m/matchDetail/getMatchDetail', (req, res) => {
+  res.send(api_map['getMatchDetail2'])
+})
 router.get('/w/category/getCategoryList', (req, res) => {
+  const {sportId} = req.query
+  if (['100', '101', '102', '103'].includes(sportId)) {
+    return res.send(api_map['getCategoryList2'])
+  }
+  res.send(api_map['getCategoryList'])
+})
+router.get('/m/category/getCategoryList', (req, res) => {
   const {sportId} = req.query
   if (['100', '101', '102', '103'].includes(sportId)) {
     return res.send(api_map['getCategoryList2'])
@@ -109,6 +119,9 @@ router.get('/w/matchDetail/getVisitHistory', (req, res) => {
 router.get('/w/matchDetail/getMatchOddsInfo1', (req, res) => {
   res.send(api_map['getMatchOddsInfo1'])
 })
+router.get('/m/matchDetail/getMatchOddsInfo1', (req, res) => {
+  res.send(api_map['getMatchOddsInfo1'])
+})
 router.post('/w/liveVideoUrl', (req, res) => {
   res.send(api_map['liveVideoUrl'])
 })
@@ -133,6 +146,9 @@ router.post('/w/esportsTournamentMatches', (req, res) => {
 router.get('/w/5esportsMatches', (req, res) => {
   res.send(api_map['_5esportsMatches'])
 })
+router.post('/m/esportsMatches', (req, res) => {
+  res.send(api_map['esportsMatches'])
+})
 router.get('/w/hotEsportsMatches', (req, res) => {
   res.send(api_map['hotEsportsMatches'])
 })
@@ -140,6 +156,9 @@ router.post('/w/esportsMatchInfoByMids', (req, res) => {
   res.send(api_map['esportsMatchInfoByMids'])
 })
 router.get('/w/matchDetail/getESMatchDetail', (req, res) => {
+  res.send(api_map['getESMatchDetail'])
+})
+router.get('/m/matchDetail/getESMatchDetail', (req, res) => {
   res.send(api_map['getESMatchDetail'])
 })
 router.post('/w/virtualProMatches', (req, res) => {
@@ -170,6 +189,9 @@ router.get('/w/matchDetail/getVirtualMatchOddsInfo', (req, res) => {
   res.send(api_map['getVirtualMatchOddsInfo'])
 })
 router.get('/w/matchDetail/getESMatchOddsInfo', (req, res) => {
+  res.send(api_map['getESMatchOddsInfo'])
+})
+router.get('/m/matchDetail/getESMatchOddsInfo', (req, res) => {
   res.send(api_map['getESMatchOddsInfo'])
 })
 
