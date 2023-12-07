@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iframe Test</title>
+</head>
+<body>
+<iframe id="iframeId" src="http://10.27.140.85:9988/#/" frameborder="0"></iframe>
+</body>
+<script>
+    window.addEventListener('message',function(e){
+        console.log(1111, e.data);
+    },false);
+</script>
+</html>

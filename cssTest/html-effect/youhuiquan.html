@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <style>
+      .coupon {
+        width: 240px;
+        height: 100px;
+        margin-top: 15px;
+        background-color: #f56c6c;
+        -webkit-mask: radial-gradient(
+          circle at left center,
+          transparent 20px,
+          red 20px
+        );
+      }
+      .coupon2 {
+        width: 240px;
+        height: 100px;
+        margin-top: 15px;
+        background-color: #f56c6c;
+        -webkit-mask: radial-gradient(circle at 0, #0000 20px, red 0),
+          radial-gradient(circle at right, #0000 20px, red 0);
+        -webkit-mask-size: 51%;
+        -webkit-mask-position: 0, 100%;
+        -webkit-mask-repeat: no-repeat;
+      }
+      .coupon3 {
+        width: 240px;
+        height: 100px;
+        margin-top: 15px;
+        background-color: #f56c6c;
+        -webkit-mask: radial-gradient(circle at 20px, #0000 20px, red 0);
+      }
+      .coupon4 {
+        width: 240px;
+        height: 100px;
+        margin-top: 15px;
+        background-color: #f56c6c;
+        -webkit-mask: radial-gradient(circle at 20px 20px, #0000 20px, red 0);
+        -webkit-mask-position: -20px -20px;
+      }
+      .coupon4-1 {
+        width: 240px;
+        height: 100px;
+        margin-top: 15px;
+        background-color: #f56c6c;
+        -webkit-mask: radial-gradient(circle at 20px 100%, #0000 12px, red 0);
+        -webkit-mask-position: -20px 100%;
+      }
+      .coupon5 {
+        width: 240px;
+        height: 100px;
+        margin-top: 15px;
+        background-color: #f56c6c;
+        -webkit-mask: radial-gradient(circle at 20px 20px, #0000 20px, red 0);
+        -webkit-mask-position: -20px -20px;
+        -webkit-mask-size: 50%;
+      }
+      /** 缩写 **/
+      /* .coupon5 {
+        -webkit-mask: radial-gradient(circle at 20px 20px, #0000 20px, red 0) -20px -20px /
+          50%;
+      } */
+      .coupon6 {
+        width: 240px;
+        height: 100px;
+        margin-top: 15px;
+        background-color: #f56c6c;
+        -webkit-mask: radial-gradient(circle at 10px, #0000 10px, red 0);
+        -webkit-mask-position: -10px;
+        -webkit-mask-size: 100% 30px;
+      }
+      .coupon7 {
+        width: 240px;
+        height: 100px;
+        margin-top: 15px;
+        background-color: #f56c6c;
+        -webkit-mask: radial-gradient(circle at 50%, red 5px, #0000 0) 50% 50% /
+            100% 20px,
+          radial-gradient(circle at 20px 20px, #0000 20px, red 0) -20px -20px /
+            50%;
+        -webkit-mask-composite: destination-out;
+        mask-composite: subtract; /*Firefox*/
+      }
+      .coupon8 {
+        width: 240px;
+        height: 100px;
+        margin-top: 15px;
+        background-color: #f56c6c;
+        -webkit-mask: radial-gradient(circle at 5px, red 5px, #0000 0) -5px 50% /
+            100% 20px,
+          radial-gradient(circle at 20px 20px, #0000 20px, red 0) -20px -20px /
+            50%;
+        -webkit-mask-composite: destination-out;
+        mask-composite: subtract; /*Firefox*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="coupon"></div>
+    <div class="coupon2"></div>
+    <div class="coupon3"></div>
+    <div class="coupon4"></div>
+    <div class="coupon4-1"></div>
+    <div class="coupon5"></div>
+    <div class="coupon6"></div>
+    <div class="coupon7"></div>
+    <div class="coupon8"></div>
+  </body>
+</html>

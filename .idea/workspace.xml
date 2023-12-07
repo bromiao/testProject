@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9e861412-71ea-46c7-9b5d-bf7a708b5515" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/001.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/002.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/003.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cssTest/dplayer/demo/DPlayer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cssTest/dplayer/demo/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cssTest/dplayer/demo/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cssTest/dplayer/demo/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cssTest/dplayer/demo/modernizr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jsTest/Array/EnumArray.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jsTest/function-achieve/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jsTest/iframe/iframe-header-token.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cssTest/jsTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/cssTest/jsTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsTest/function-achieve/better-zero-timeout.js" beforeDir="false" afterPath="$PROJECT_DIR$/jsTest/function-achieve/better-zero-timeout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/personal_log/management.abc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/personal_log/music.abc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/personal_log/npm-package.abc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/personal_log/tool-list.abc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/personal_log/youhua.abc" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -46,39 +41,47 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2718FdJv1TlAZh7y1OnE6WPAWbE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Mango/resources/app" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/luen/work/gitProject/testProject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="D:\testProject\testProject\cssTest\html-effect\imgs" />
       <recent name="D:\testProject\testProject\cssTest\html-effect" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.test3.html">
+    <configuration name="test3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/testProject/test3.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="convert-output.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/jsTest/function-achieve/convert-output.js" working-dir="$PROJECT_DIR$/jsTest/function-achieve">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.test3.html" />
         <item itemvalue="Node.js.convert-output.js" />
       </list>
     </recent_temporary>
@@ -148,6 +151,10 @@
       <workItem from="1686709969967" duration="1181000" />
       <workItem from="1686882210090" duration="594000" />
       <workItem from="1686898449568" duration="56000" />
+      <workItem from="1688982852836" duration="155000" />
+      <workItem from="1689410438701" duration="342000" />
+      <workItem from="1692174967492" duration="4532000" />
+      <workItem from="1695623733985" duration="5403000" />
     </task>
     <task id="LOCAL-00001" summary="add some new">
       <created>1660103318053</created>
@@ -172,7 +179,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add some new" />
