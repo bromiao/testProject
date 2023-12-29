@@ -75,4 +75,4 @@
 // }
 
 
-const emailReg = /^[\w-.]+@[\w-.]+/gm
+var reg = /\/\/.*\//
